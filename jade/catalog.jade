@@ -1,0 +1,63 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			section(id="content")
+				include components/breadcrumbs.jade
+				div(class="center clear")
+					div(id="content-text" class="right-content")
+						h1 Каталог
+						div(class="clear")
+							- for(i=0; i<8; i++)
+								a(href="#" class="category-card")
+									img(src="i/category-card.png")
+									div(class="category-card-title") Коляски
+					aside(id="sidebar" class="left-sidebar")
+						section(id="sidebar-categories")
+							ul
+								li.active
+									a(href="#") Коляски
+									ul
+										li
+											a(href="#") Классика
+										li
+											a(href="#") 2 в 1
+										li
+											a(href="#") 3 в 1
+										li
+											a(href="#") Трансформеры
+										li
+											a(href="#") Прогулочные
+										li
+											a(href="#") Трости
+								li
+									a(href="#") Автокресла
+									ul
+										li
+											a(href="#") Классика
+										li
+											a(href="#") 2 в 1
+										li
+											a(href="#") 3 в 1
+										li
+											a(href="#") Трансформеры
+										li
+											a(href="#") Прогулочные
+										li
+											a(href="#") Трости
+								li
+									a(href="#") Детская мебель
+								li
+									a(href="#") Малыш и мама
+								li
+									a(href="#") Одежда
+								li
+									a(href="#") Обувь
+								li
+									a(href="#") Игры и игрушки
+								li
+									a(href="#") Товары для школы

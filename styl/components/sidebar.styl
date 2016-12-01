@@ -1,0 +1,234 @@
+#sidebar
+	width 270px
+	&.left-sidebar
+		float left
+		margin 0 0 0 30px
+	&.right-sidebar
+		float right
+		margin 0 30px 0 0
+	#sidebar-categories
+		background red
+		li
+			display block
+			font-size 16px
+			font-weight 700
+			text-transform uppercase
+			&.active
+				a
+					background lightPink
+					&:after
+						transform rotate(180deg)
+				ul
+					display block
+					li a
+						background transparent
+			a
+				display block
+				color white
+				line-height 51px
+				background topGray
+				margin 0 0 5px
+				padding 0 50px
+				position relative
+				transition all .2s ease-in
+				&:hover
+					background lightPink
+				&:after
+					display block
+					content ""
+					background url("../i/sidebar-arrow.png") no-repeat center center
+					background-size 100% 100%
+					width 16px
+					height 12px
+					position absolute
+					right 20px
+					top 0
+					bottom 0
+					margin auto
+					transition all .2s ease-in
+			ul
+				margin -5px 20px 0
+				background #FFF
+				padding 25px 0 40px
+				display none
+				li a
+					margin 0 0 10px
+					background transparent
+					color blue
+					font-size 14px
+					line-height 18px
+					text-transform none
+					padding 0 25px
+					&:hover
+						color pink
+	#sidebar-one-levlel ul li
+		display block
+		font-size 14px
+		font-weight 500
+		a
+			display block
+			line-height 34px
+			background sidebarBlue
+			color white
+			padding 0 45px
+			border-bottom 6px solid white
+			transition all .2s ease-in
+			&:hover
+				background lightPink
+		&.active a
+			background lightPink
+
+	#sidebar-filter
+		padding 20px
+		background red
+		form
+			background white
+			padding 20px 25px 40px
+			h2
+				font-size 18px
+				font-weight 700
+				color blue
+				margin 0 0 16px
+			h3
+				font-size 14px
+				color blue
+				margin 0 0 12px
+				&.price-header
+					margin-top 20px
+			#sidebar-search
+				border 1px solid topGray
+				border-radius 2px
+				display block
+				font-size 12px
+				font-weight 300
+				color blue
+				line-height 25px
+				padding 0 35px 0 10px
+				margin 0 0 10px
+				width calc(100% - 47px)
+				background url("../i/Shape-2.png") right 5px center no-repeat
+				background-size 17px 17px
+				placeholder-color(blue)
+			.checkbox-ui
+				display block
+		#reset-filter
+			display block
+			border none
+			width 100%
+			line-height 42px
+			background lightBlue
+			color white
+			font-size 18px
+			font-weight 700
+			text-align center
+			outline none
+			transition all .2s ease-in
+			cursor pointer
+			margin 20px 0 0
+			&:hover
+				background blue
+		.price-from
+			float left
+			width 80px
+			font-weight 300
+			font-size 14px
+			color blue
+			input
+				display block
+				width calc(100% - 20px)
+				border-radius 2px
+				border 1px solid topGray
+				line-height 25px
+				margin 5px 0 0
+				padding 0 10px
+		.price-to
+			float right
+			width 80px
+			font-weight 300
+			font-size 14px
+			color blue
+			input
+				display block
+				width calc(100% - 20px)
+				border-radius 2px
+				border 1px solid topGray
+				line-height 25px
+				margin 5px 0 0
+				padding 0 10px
+
+@media screen and (max-width: 1230px)
+
+	#sidebar
+
+		&.left-sidebar
+			float left
+			margin 0 0 0 30px
+		&.right-sidebar
+			float right
+			margin 0 30px 0 0
+		#sidebar-categories
+			background red
+			li
+				font-size 14px
+				&.active
+					a
+						background lightPink
+						&:after
+							transform rotate(180deg)
+					ul
+						display block
+						li
+							a
+								background transparent
+								font-size 12px
+				a
+					display block
+					color #FFF
+					line-height 42px
+					background topGray
+					margin 0 0 5px
+					padding 0 40px
+					position relative
+					transition all .2s ease-in
+					&:hover
+						background lightPink
+					&:after
+						width 13px
+						height 10px
+
+@media screen and (max-width: 767px)
+
+	#sidebar
+
+		&.left-sidebar
+			float left
+			margin 0 0 0 30px
+		&.right-sidebar
+			float right
+			margin 0 30px 0 0
+		#sidebar-categories
+			background red
+			li
+				font-size 22px
+				font-family futura
+				text-transform none
+				a
+					background url("../i/catalog-sidebar.png") no-repeat center center
+					background-size cover
+					padding 0 20px
+					margin 0 0 2px
+					&:after
+						background url("../i/mobile-catalog.png") no-repeat center center
+				ul
+					padding 20px 0
+					li
+						font-family roboto
+						font-size 14px
+			li.active
+				a
+					background url("../i/catalog-sidebar.png") no-repeat center center
+					background-size cover
+					&:after
+						transform rotate(90deg)
+				
+				

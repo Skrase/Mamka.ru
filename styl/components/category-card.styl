@@ -1,0 +1,48 @@
+.category-card
+	float left
+	margin 0 0 30px 30px
+	display block
+	width calc(50% - 30px)
+	position relative
+	color white
+	img
+		display block
+		width 100%
+	.category-card-title
+		position absolute
+		bottom 0
+		left 0
+		right 0
+		background lightBlueRGBA(.45)
+		padding 0 30px
+		line-height 57px
+		font-family futura
+		font-size 32px
+		transition all .1s ease-in
+	&:hover .category-card-title
+		background lightBlue
+		line-height 70px
+
+@media screen and (max-width: 1230px)
+
+	.category-card
+		margin 0 0 30px 20px
+		width calc(50% - 30px)
+		.category-card-title
+			font-size 27px
+			line-height 47px
+
+@media screen and (max-width: 1023px)
+
+	.category-card
+		margin 0 0 30px 20px
+		width calc(50% - 30px)
+		.category-card-title
+			font-size 18px
+			padding 0 20px
+			line-height 30px
+
+@media screen and (max-width: 767px)
+
+	.category-card
+		display none

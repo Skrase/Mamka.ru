@@ -1,0 +1,292 @@
+.card
+	width 268px
+	float left
+	margin 0 0 30px 30px
+	border 1px solid cardBorderColor
+	border-radius 3px
+	position relative
+	transition all .2s ease-in
+	&:hover
+		border 1px solid lightBlue
+	.card-image-link
+		position relative
+		display block
+		&:after
+			display block
+			content ""
+			background url("../i/eyes.png") center 120px no-repeat, blueRgba(.43)
+			width 100%
+			height 100%
+			left 0
+			top 0
+			position absolute
+			opacity 0
+			transition all .2s ease-in
+		&:hover:after
+			opacity 1
+
+		img
+			width 100%
+			display block
+			height auto
+			border-radius 3px 3px 0 0
+	.card-title
+		display block
+		font-size 14px
+		font-weight 600
+		color blue
+		line-height 18px
+		padding 20px 15px 7px
+		transition all .2s ease-in
+		&:hover
+			color pink
+	.card-code
+		font-size 12px
+		color blue
+		font-weight 300
+		margin 0 15px
+		float left
+	.card-absent
+		float right
+		font-size 12px
+		font-weight 500
+		margin 0 15px 0 0
+		&.green
+			color green
+		&.red
+			color red
+	.card-price
+		padding 10px 15px
+		font-size 20px
+		font-weight 500
+		.old-price
+			color blue
+			display inline-block
+			margin 0 15px 0 0
+		.price
+			color pink
+			display inline-block
+	.card-form
+		padding 0 15px 15px
+		.count-picker
+			float left
+			margin 2px 0 0
+		.card-add-button
+			line-height 30px
+			float right
+			width 105px
+			font-weight 500
+			font-size 14px
+			text-align center
+			border none
+			background lightBlue
+			color white
+			cursor pointer
+			border-radius 2px
+			transition all .2s ease-in
+			&:hover
+				background blue
+	.card-tag
+		position absolute
+		right -12px
+		padding 0 12px 0 10px
+		line-height 34px
+		height 34px
+		font-family futura
+		&.new
+			background yelow
+			top 168px
+			color red
+			text-transform uppercase
+			&:before
+
+				display block
+				position absolute
+				left -20px
+				content ""
+				width 0
+				height 0
+				border-top 17px solid yelow
+				border-left 20px solid transparent
+				border-bottom 17px solid yelow
+			&:after
+				width 0
+				height 0
+				display block
+				content ""
+				position absolute
+				right 0
+				top 34px
+				border-top 12px solid tagYelow
+				border-right 12px solid transparent
+		&.action
+			@extend .card .card-tag.new
+			background tagLightBlue
+			color white
+			top 207px
+			&:before
+				border-top 17px solid tagLightBlue
+				border-bottom 17px solid tagLightBlue	
+			&:after
+				border-top 12px solid tagBlue
+		&.discount
+			@extend .card .card-tag.new
+			background red
+			color white
+			text-transform lowercase
+			top 247px
+			&:before
+				border-top 17px solid red
+				border-bottom 17px solid red
+			&:after
+				border-top 12px solid tagRed
+
+
+@media screen and (max-width: 1230px)
+
+	.card
+		width calc(33.333333% - 22px)
+		margin 0 0 20px 20px
+		.card-code
+			font-size 11px
+		.card-absent
+			font-size 11px
+		.card-tag
+			right -10px
+			padding 0 12px 0 10px
+			line-height 30px
+			height 30px
+			font-size 14px
+			padding 0 5px 0 5px
+			&.new
+				top auto
+				bottom 220px
+				&:before
+					left -15px
+					border-top 15px solid yelow
+					border-left 15px solid transparent
+					border-bottom 15px solid yelow
+				&:after
+
+					top 30px
+					border-top 10px solid tagYelow
+					border-right 10px solid transparent
+			&.action
+				top auto
+				bottom 185px
+				&:before
+					left -15px
+					border-top 15px solid tagLightBlue
+					border-bottom 15px solid tagLightBlue
+					border-left 15px solid transparent
+				&:after
+					top 30px
+					border-top 10px solid tagBlue
+			&.discount
+				top auto
+				bottom 150px
+				&:before
+					left -15px
+					border-top 15px solid red
+					border-bottom 15px solid red
+					border-left 15px solid transparent
+
+				&:after
+					top 30px
+					border-top 10px solid tagRed
+
+
+@media screen and (max-width: 1023px)
+
+	.card
+		width calc(50% - 22px)
+		margin 0 0 20px 20px
+@media screen and (max-width: 767px)
+
+	.card
+		width auto
+		float none
+		margin 0 20px
+		border-radius 0
+		border none
+		border-bottom 1px solid mobileCardBorder
+		.card-title
+			padding 0
+			font-size 14px
+			line-height 20px
+			height 60px
+			font-weight 700
+		.card-image-link
+			width 100px
+			height 100px
+			float left
+		.card-content
+			float right
+			width calc(100% - 115px)
+			padding 0 0 0 15px
+			position relative
+		.card-tag
+			right calc(100% - 5px)
+			font-size 6px
+			line-height 12px
+			height 12px
+			&.new
+				top auto
+				bottom 50px
+				&:before
+					left -6px
+					border-top 6px solid yelow
+					border-left 6px solid transparent
+					border-bottom 6px solid yelow
+				&:after
+
+					top 100%
+					border-top 6px solid tagYelow
+					border-right 6px solid transparent
+			&.action
+				top auto
+				bottom 35px
+				&:before
+					left -6px
+					border-top 6px solid tagLightBlue
+					border-bottom 6px solid tagLightBlue
+					border-left 6px solid transparent
+				&:after
+					top 100%
+					border-right 6px solid transparent
+					border-top 5px solid tagBlue
+			&.discount
+				top auto
+				bottom 20px
+				&:before
+					left -6px
+					border-top 6px solid red
+					border-bottom 6px solid red
+					border-left 6px solid transparent
+
+				&:after
+					top 100%
+					border-right 6px solid transparent
+					border-top 5px solid tagRed
+		.card-code
+			display none
+		.card-absent
+			display none
+		.count-picker
+			display none
+		.card-price
+			float left
+			padding 0
+			margin 7px 0 0
+			font-size 20px
+			.old-price
+				display none
+		.card-form
+			padding 0
+			.card-add-button
+				overflow hidden
+				width 37px
+				height 37px
+				margin 0 0 15px
+				background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%20300%20300%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M179.47%2C83.67c0.75%2C0.14%2C1.51.24%2C2.25%2C0.42%2C4.17%2C1%2C7.49%2C3.16%2C9.4%2C7.13a14.19%2C14.19%2C0%2C0%2C1%2C.82%2C9.78%2C2%2C2%2C0%2C0%2C1-.3.59l-17.27%2C25.91-0.4.61h27.7a18.19%2C18.19%2C0%2C0%2C1%2C6.46%2C35.19%2C42.47%2C42.47%2C0%2C0%2C1-4.22%2C1%2C1.2%2C1.2%2C0%2C0%2C0-.63.43Q198.14%2C172%2C193%2C179.18%2C177.17%2C201.6%2C161.3%2C224a10.31%2C10.31%2C0%2C0%2C1-8.85%2C4.57q-29.6%2C0-59.19%2C0a10.09%2C10.09%2C0%2C0%2C1-8.6-4.43Q72.48%2C207%2C60.36%2C189.85q-8.88-12.54-17.76-25.08a1%2C1%2C0%2C0%2C0-.65-0.37%2C17.94%2C17.94%2C0%2C0%2C1-16.09-13.84c-0.2-.86-0.31-1.74-0.47-2.61v-3.39c0.11-.69.2-1.38%2C0.35-2.06a17.9%2C17.9%2C0%2C0%2C1%2C17.77-14.4H70.85l-0.37-.57L53.23%2C101.67a2.24%2C2.24%2C0%2C0%2C1-.37-0.67%2C14.48%2C14.48%2C0%2C0%2C1%2C.53-9.13c1.73-4.16%2C5-6.54%2C9.24-7.67%2C0.9-.24%2C1.84-0.36%2C2.76-0.53h2.78l1.14%2C0.2A14.68%2C14.68%2C0%2C0%2C1%2C79.5%2C90.08c1.1%2C1.59%2C2.2%2C3.19%2C3.28%2C4.79q11%2C16.41%2C22%2C32.83a0.78%2C0.78%2C0%2C0%2C0%2C.74.41q16.92%2C0%2C33.83%2C0a0.78%2C0.78%2C0%2C0%2C0%2C.74-0.41q4.33-6.5%2C8.69-13L165.22%2C90.2a14.35%2C14.35%2C0%2C0%2C1%2C8.71-6c0.91-.23%2C1.84-0.35%2C2.76-0.52h2.78Zm-56.88%2C74.78q39.57%2C0%2C79.14%2C0a13.24%2C13.24%2C0%2C0%2C0%2C3.44-.47%2C12.2%2C12.2%2C0%2C0%2C0-3.34-23.87H43.39a12.4%2C12.4%2C0%2C0%2C0-2.4.24%2C12%2C12%2C0%2C0%2C0-9.36%2C14.49%2C11.84%2C11.84%2C0%2C0%2C0%2C11.87%2C9.62h79.09Zm-72.85%2C6%2C0.46%2C0.66%2C25.32%2C35.77q6.93%2C9.79%2C13.86%2C19.59a4.78%2C4.78%2C0%2C0%2C0%2C4.18%2C2.17c3%2C0%2C6.07%2C0%2C9.1%2C0h0.63c-0.07-.25-0.11-0.42-0.16-0.58q-8.91-28.51-17.8-57a0.7%2C0.7%2C0%2C0%2C0-.8-0.61q-17.07%2C0-34.14%2C0H49.73Zm92.85%2C58.18h0.63c3%2C0%2C6%2C0%2C8.95%2C0a5%2C5%2C0%2C0%2C0%2C4.4-2.26q19.6-27.73%2C39.23-55.45c0.09-.13.17-0.28%2C0.3-0.48h-0.64q-17%2C0-34%2C0a0.76%2C0.76%2C0%2C0%2C0-.88.64q-8.77%2C28.12-17.56%2C56.23C142.85%2C221.7%2C142.73%2C222.12%2C142.59%2C222.61Zm-17.44-58.15v58.12l0.38%2C0c3.45%2C0%2C6.89%2C0%2C10.34%2C0a0.53%2C0.53%2C0%2C0%2C0%2C.57-0.49l17.87-57.23c0-.14.07-0.29%2C0.11-0.45H125.14Zm-33.7%2C0c0.05%2C0.19.09%2C0.35%2C0.14%2C0.52l6%2C19.25q5.92%2C19%2C11.84%2C37.91a0.56%2C0.56%2C0%2C0%2C0%2C.63.49c2.85%2C0%2C5.69%2C0%2C8.54%2C0l0.48%2C0V164.46H91.44ZM147%2C128.1h0.63q9.26%2C0%2C18.51%2C0a0.94%2C0.94%2C0%2C0%2C0%2C.91-0.48q9.35-14.05%2C18.73-28.09a3.56%2C3.56%2C0%2C0%2C0%2C.62-1.8%2C6.92%2C6.92%2C0%2C0%2C0-4.73-7.41%2C10.21%2C10.21%2C0%2C0%2C0-8.28.42%2C7.53%2C7.53%2C0%2C0%2C0-3%2C2.47c-0.89%2C1.28-1.78%2C2.56-2.65%2C3.85l-19.53%2C29.16Zm-49.24%2C0c-0.14-.23-0.23-0.39-0.33-0.54q-5.76-8.6-11.52-17.21Q80.3%2C102%2C74.66%2C93.65a7.86%2C7.86%2C0%2C0%2C0-1.32-1.57%2C9.78%2C9.78%2C0%2C0%2C0-8.83-2.16c-4.2.89-6.34%2C3.72-6.11%2C8a2.85%2C2.85%2C0%2C0%2C0%2C.49%2C1.48q9.46%2C14.14%2C18.88%2C28.3a0.86%2C0.86%2C0%2C0%2C0%2C.82.45q9.31%2C0%2C18.62%2C0h0.57Z%22/%3E%3C/svg%3E') no-repeat 3px center, addToCartButton
+				color transparent

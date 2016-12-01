@@ -1,0 +1,78 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			section(id="content")
+				include components/breadcrumbs.jade
+				div(class="center clear")
+					h1(class="content-header") Каталог
+					aside(id="sidebar" class="left-sidebar clear")
+						section(id="sidebar-one-levlel")
+							ul
+								li.active
+									a(href="#") Классика
+								li
+									a(href="#") 2 в 1
+								li
+									a(href="#") 3 в 1
+								li
+									a(href="#") Трансформеры
+								li
+									a(href="#") Прогулочные
+								li
+									a(href="#") Трости
+
+
+						include components/sidebar.jade
+					div(id="content-text" class="right-content clear")
+						div(id="brands-header")
+							input(type="text" id="brands-search" placeholder="Поиск по брендам")
+
+							div(id="brands-sort") Сортировать: 
+								a(href="#") по популярности
+								span /
+								a(href="#" class="active") по алфавиту
+
+
+
+						h2(class="letters-header") Русский алфавит
+						div(class="clear")
+							- for(i=0; i<8; i++)
+								ul(class="a-z")
+									h3(class="letter") a
+									ul
+										li
+											a(href="#") Абрико
+										li
+											a(href="#") Аваль-Трейд
+										li
+											a(href="#") Авангард
+										li
+											a(href="#") Аванта
+										li
+											a(href="#") Авантаж
+										li
+											a(href="#") Агу-Агу
+										li
+											a(href="#") Агуша
+										li
+											a(href="#") Азбукварик
+										li
+											a(href="#") Айрис Пресс
+										li
+											a(href="#") Академия Групп
+										li
+											a(href="#") Академия Холдинг
+										li
+											a(href="#") Алкой
+										li
+											a(href="#") Алмаз-Мебель
+										li
+											a(href="#") Альянс
+						
+
+					

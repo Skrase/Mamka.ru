@@ -1,0 +1,33 @@
+#breadcrumbs
+	border-top 1px solid headerBorderColor
+	border-bottom 1px solid headerBorderColor
+	line-height 44px
+	font-size 12px
+	background-size cover
+	color blue
+	font-weight 500
+	margin 0 0 30px
+	ul
+		padding 0 30px
+		margin 0
+		li
+			display inline
+			span
+				margin 0 20px
+			a
+				color blue
+				text-decoration underline
+				transition all .2s ease-in
+				&:hover
+					color pink
+
+#mobile-crumb
+	display none
+
+
+@media screen and (max-width: 1230px)
+	#breadcrumbs
+		font-size 12px
+		line-height 25px
+		ul
+			padding 0 20px

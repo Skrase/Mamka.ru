@@ -1,0 +1,318 @@
+#header
+	background white
+	#top-header
+		border-bottom 1px solid headerBorderColor
+		#top-nav
+			font-size 11px
+			line-height 30px
+			float left
+			margin 0 0 0 30px
+			li
+				display inline-block
+				margin 0 25px 0 0
+				a
+					color topGray
+					transition all .2s ease-in
+					&:hover
+						color blue
+
+		#login-button
+			float right
+			margin 0 30px 0 0
+			background lightPink
+			border none
+			color white
+			width 131px
+			line-height 30px
+			cursor pointer
+			transition all .2s ease-in
+			font-size 12px
+			font-weight 500
+			&:hover
+				background pink
+		#connect-button
+			margin 0 40px 0 0
+			float right
+			border none
+			background transparent
+			color blue
+			font-size 12px
+			font-weight 500
+			line-height 30px
+			cursor pointer
+			span
+				border-bottom 1px dashed blue
+				transition all .2s ease-in
+			&:hover span
+				border-bottom 1px dashed white
+		#header-tel
+			font-family futura
+			color pink
+			float right
+			line-height 30px
+			margin 0 20px 0 0
+
+	#mid-header
+		border-bottom 1px solid headerBorderColor
+		#logo
+			display block
+			float left
+			margin 13px 30px 0
+		#menu-button
+			display none
+		#mid-nav-block
+			float right
+			width 670px
+			margin 0 62px 0 0
+			#main-nav
+				float right
+				line-height 56px
+				ul li
+					display inline-block
+					font-size 12px
+					font-weight 500
+					a
+						color lightBlue
+						margin 0 25px 0 0
+						transition all .2s ease-in
+						&:hover
+							color pink
+			#search-button
+				float right
+				width 40px
+				height 40px
+				border none
+				margin 10px 0 0 0
+				background transparent
+				cursor pointer
+				span
+					display none
+				svg
+					stroke blue
+					transition all .2s ease-in
+				&:hover
+					svg
+						stroke pink
+			#search-form
+				display none
+		#cart-like-block
+			float right
+			margin 0 30px 0 0
+			a
+				font-size 11px
+				text-align center
+				width 50px
+				display block
+				float left
+				color lightBlue
+				font-weight 500
+				transition all .2s ease-in
+				&:hover
+					color pink
+				span
+					display block
+					margin -5px 0 0
+				svg
+					margin 0 auto
+					display block
+				&#like-header-link
+					width 60px
+					margin 0 39px 0 0
+					svg
+						stroke pink
+						width 42px
+						height 42px
+					span
+						margin -7px 0 0
+				&#cart-header-link
+					margin 0 3px 0 0
+					svg
+						fill pink
+						width 40px
+						height 40px
+						margin -2px 0 2px 8px
+
+
+	#bottom-header
+		a
+			display block
+			width calc(((100% - 30px) / 8))
+			float left
+			text-align center
+			color blue
+			font-size 14px
+			font-weight 500
+			padding 0 0 10px
+			transition all .2s ease-in
+			svg
+				width 55px
+				height 55px
+				margin 10px auto -5px
+				fill blue
+				stroke blue
+				transition all .2s ease-in
+			span
+				display block
+			&:hover, &.active
+				color pink
+				svg
+					fill pink
+					stroke pink
+
+@media screen and (max-width: 1230px)
+
+	#header
+		#top-header
+			#top-nav
+				margin 0 0 0 20px
+			#login-button
+				margin 0 20px 0 0
+		#mid-header
+			#logo
+				margin 17px 0 0 20px
+				width 150px
+			#cart-like-block
+				margin 0 20px 0 0
+			#mid-nav-block
+				margin 0 20px 0 0
+				width 600px
+				font-size 10px
+				#main-nav
+					ul li a
+						margin 0 20px 0 0
+		#bottom-header a
+			font-size 12px
+			width calc((100% - 20px) / 8)
+
+@media screen and (max-width: 1023px)
+
+	#header
+		#top-header
+			#top-nav
+				margin 0 0 0 20px
+			#login-button
+				margin 0 20px 0 0
+			#connect-button
+				display none
+			#header-tel
+				display none
+		#mid-header
+			#logo
+				margin 10px 0 10px 20px
+				width 190px
+			#menu-button
+				float right
+				display block
+				width 25px
+				height 25px
+				margin 12px 20px 0 0
+				border none
+				background transparent
+				position relative
+				div
+					position absolute
+					left 0
+					width 25px
+					height 2px
+					background blue
+					&.line1
+						top 2px
+					&.line2
+						top 12px
+					&.line3
+						top 21px
+			#cart-like-block
+				margin 0 20px 0 0
+				a#like-header-link
+					width 50px
+					height 50px
+					margin 0 20px 0 0
+					svg
+						width 50px
+						height 50px
+					span
+						display none
+				a#cart-header-link
+					width 50px
+					height 50px
+					svg
+						width 50px
+						height 50px
+					span
+						display none
+			#mid-nav-block
+				width auto
+				margin 0
+				#main-nav
+					display none
+				#search-button
+					margin 0 20px
+					width 50px
+					height 50px
+
+						
+		#bottom-header
+			padding 0 20px
+			a
+				line-height 39px
+				padding 0
+				width auto
+				display inline-block
+				margin 0 20px 0 0
+				svg
+					display none
+
+@media screen and (max-width: 760px)
+	
+
+	
+	#header
+		#top-header
+			#login-button
+				line-height 40px
+			#top-nav
+				display none
+		#mid-header
+			position relative
+			#logo
+				width 140px
+				margin 10px 0 10px 20px
+			#menu-button
+				margin 9px 20px 0 0
+			#cart-like-block
+				position absolute
+				left 65px
+				top -35px
+				a#like-header-link
+					width 30px
+					height 30px
+					margin 0 15px 0 0
+					// outline 1px solid red
+					svg
+						width 40px
+						height 40px
+						margin -4px 0 0 -3px
+				a#cart-header-link
+					width 30px
+					height 30px
+					margin 0
+					// outline 1px solid red
+					svg
+						width 40px
+						height 40px
+						margin -6px 0 0 -1px
+				
+			
+					
+			#mid-nav-block #search-button
+				position absolute
+				left 0
+				top -35px
+				width 30px
+				height 30px
+				svg
+					width 40px
+					height 40px
+					margin -8px
+		#bottom-header
+			display none

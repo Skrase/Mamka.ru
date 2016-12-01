@@ -1,0 +1,648 @@
+
+#product-gallery
+	float left
+	width 300px
+	margin 0 0 0 30px
+	#big-product-image
+		width calc(100% - 2px)
+		height auto
+		border 1px solid cardBorderColor
+		border-radius 3px
+		display block
+	#small-product-image
+		margin 0 0 0 -17px
+		img
+			float left
+			display block
+			width calc(33.333333% - 19px)
+			margin 17px 0 0 17px
+			border-radius 3px
+			border 1px solid cardBorderColor
+
+#product-content
+	width 800px
+	float right
+	margin 0 30px 0 0
+	color blue
+	#product-header
+		font-family futura
+		font-size 32px
+		margin 0 0 30px
+		color lightBlue
+		&:after
+			display block
+			background lightBlue
+			content ""
+			height 4px
+			border-radius 2px
+	#product-info
+		width 400px
+		float left
+		margin -10px 0 0
+		.product-stars
+			vertical-align middle
+			display inline-block
+			width 97px
+			height 17px
+			background url("../i/stars.png") no-repeat center center
+		.to-reviews
+			vertical-align middle
+			margin 0 0 0 20px
+			line-height 17px
+			font-size 14px
+			font-weight 300
+			color blue
+			text-decoration underline
+		p
+			font-size 14px
+			color blue
+			font-weight 300
+			margin 20px 0 0
+			line-height 24px
+		.price-title
+			margin 25px 0 15px
+			font-weight 500
+		.price-size
+			font-size 36px
+			color pink
+			font-weight 700
+			display inline-block
+			line-height 32px
+			margin 0 0 15px
+			vertical-align bottom
+		#product-count
+			width 53px
+			// border-radius 3px
+			margin 0 0 15px 30px
+			line-height 25px
+			vertical-align middle
+			boder 1px solid topGray
+		#product-add-to-cart
+			border none
+			padding 0 0 0 45px
+			text-align center
+			width 170px
+			line-height 42px
+			color white
+			font-size 18px
+			font-weight 700
+			border-radius 3px
+			background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%20300%20300%22%20stroke%3D%22none%22%3E%3Cpath%20d%3D%22M179.47%2C83.67c0.75%2C0.14%2C1.51.24%2C2.25%2C0.42%2C4.17%2C1%2C7.49%2C3.16%2C9.4%2C7.13a14.19%2C14.19%2C0%2C0%2C1%2C.82%2C9.78%2C2%2C2%2C0%2C0%2C1-.3.59l-17.27%2C25.91-0.4.61h27.7a18.19%2C18.19%2C0%2C0%2C1%2C6.46%2C35.19%2C42.47%2C42.47%2C0%2C0%2C1-4.22%2C1%2C1.2%2C1.2%2C0%2C0%2C0-.63.43Q198.14%2C172%2C193%2C179.18%2C177.17%2C201.6%2C161.3%2C224a10.31%2C10.31%2C0%2C0%2C1-8.85%2C4.57q-29.6%2C0-59.19%2C0a10.09%2C10.09%2C0%2C0%2C1-8.6-4.43Q72.48%2C207%2C60.36%2C189.85q-8.88-12.54-17.76-25.08a1%2C1%2C0%2C0%2C0-.65-0.37%2C17.94%2C17.94%2C0%2C0%2C1-16.09-13.84c-0.2-.86-0.31-1.74-0.47-2.61v-3.39c0.11-.69.2-1.38%2C0.35-2.06a17.9%2C17.9%2C0%2C0%2C1%2C17.77-14.4H70.85l-0.37-.57L53.23%2C101.67a2.24%2C2.24%2C0%2C0%2C1-.37-0.67%2C14.48%2C14.48%2C0%2C0%2C1%2C.53-9.13c1.73-4.16%2C5-6.54%2C9.24-7.67%2C0.9-.24%2C1.84-0.36%2C2.76-0.53h2.78l1.14%2C0.2A14.68%2C14.68%2C0%2C0%2C1%2C79.5%2C90.08c1.1%2C1.59%2C2.2%2C3.19%2C3.28%2C4.79q11%2C16.41%2C22%2C32.83a0.78%2C0.78%2C0%2C0%2C0%2C.74.41q16.92%2C0%2C33.83%2C0a0.78%2C0.78%2C0%2C0%2C0%2C.74-0.41q4.33-6.5%2C8.69-13L165.22%2C90.2a14.35%2C14.35%2C0%2C0%2C1%2C8.71-6c0.91-.23%2C1.84-0.35%2C2.76-0.52h2.78Zm-56.88%2C74.78q39.57%2C0%2C79.14%2C0a13.24%2C13.24%2C0%2C0%2C0%2C3.44-.47%2C12.2%2C12.2%2C0%2C0%2C0-3.34-23.87H43.39a12.4%2C12.4%2C0%2C0%2C0-2.4.24%2C12%2C12%2C0%2C0%2C0-9.36%2C14.49%2C11.84%2C11.84%2C0%2C0%2C0%2C11.87%2C9.62h79.09Zm-72.85%2C6%2C0.46%2C0.66%2C25.32%2C35.77q6.93%2C9.79%2C13.86%2C19.59a4.78%2C4.78%2C0%2C0%2C0%2C4.18%2C2.17c3%2C0%2C6.07%2C0%2C9.1%2C0h0.63c-0.07-.25-0.11-0.42-0.16-0.58q-8.91-28.51-17.8-57a0.7%2C0.7%2C0%2C0%2C0-.8-0.61q-17.07%2C0-34.14%2C0H49.73Zm92.85%2C58.18h0.63c3%2C0%2C6%2C0%2C8.95%2C0a5%2C5%2C0%2C0%2C0%2C4.4-2.26q19.6-27.73%2C39.23-55.45c0.09-.13.17-0.28%2C0.3-0.48h-0.64q-17%2C0-34%2C0a0.76%2C0.76%2C0%2C0%2C0-.88.64q-8.77%2C28.12-17.56%2C56.23C142.85%2C221.7%2C142.73%2C222.12%2C142.59%2C222.61Zm-17.44-58.15v58.12l0.38%2C0c3.45%2C0%2C6.89%2C0%2C10.34%2C0a0.53%2C0.53%2C0%2C0%2C0%2C.57-0.49l17.87-57.23c0-.14.07-0.29%2C0.11-0.45H125.14Zm-33.7%2C0c0.05%2C0.19.09%2C0.35%2C0.14%2C0.52l6%2C19.25q5.92%2C19%2C11.84%2C37.91a0.56%2C0.56%2C0%2C0%2C0%2C.63.49c2.85%2C0%2C5.69%2C0%2C8.54%2C0l0.48%2C0V164.46H91.44ZM147%2C128.1h0.63q9.26%2C0%2C18.51%2C0a0.94%2C0.94%2C0%2C0%2C0%2C.91-0.48q9.35-14.05%2C18.73-28.09a3.56%2C3.56%2C0%2C0%2C0%2C.62-1.8%2C6.92%2C6.92%2C0%2C0%2C0-4.73-7.41%2C10.21%2C10.21%2C0%2C0%2C0-8.28.42%2C7.53%2C7.53%2C0%2C0%2C0-3%2C2.47c-0.89%2C1.28-1.78%2C2.56-2.65%2C3.85l-19.53%2C29.16Zm-49.24%2C0c-0.14-.23-0.23-0.39-0.33-0.54q-5.76-8.6-11.52-17.21Q80.3%2C102%2C74.66%2C93.65a7.86%2C7.86%2C0%2C0%2C0-1.32-1.57%2C9.78%2C9.78%2C0%2C0%2C0-8.83-2.16c-4.2.89-6.34%2C3.72-6.11%2C8a2.85%2C2.85%2C0%2C0%2C0%2C.49%2C1.48q9.46%2C14.14%2C18.88%2C28.3a0.86%2C0.86%2C0%2C0%2C0%2C.82.45q9.31%2C0%2C18.62%2C0h0.57Z%22/%3E%3C/svg%3E') no-repeat 15px -8px, lightBlue
+			background-size 50px 50px
+			transition all .2s ease-in
+			cursor pointer
+			&:hovers
+				background-color blue
+		#like-button
+			border none
+			padding 0
+			background none
+			vertical-align middle
+			margin -6px 0 0 10px
+			svg
+				width 50px
+				height 50px
+				stroke pink
+			span
+				display none
+		.product-in-store
+			font-weight 300
+			margin 5px 0 13px
+			font-size 14px
+			.green
+				font-weight 500
+				color green
+			.red
+				font-weight 500
+				color red
+		#product-share
+			a
+				display inline-block
+				line-height 42px
+				height 42px
+				padding 0 0 0 42px
+				background blue
+				margin 0 7px 0 0
+				color white
+				font-weight 500
+				font-size 18px
+				border-radius 3px
+				&.google
+					background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%20491.9%20491.9%22%3E%3Cpath%20d%3D%22M377.5%20225H201.3v58.7h107.5c-16%2051-63.7%2088-120%2088-69.6%200-126-56.3-126-125.8%200-69.7%2056.4-126%20126-126%2035%200%2066.6%2014.3%2089.4%2037.4l42.6-46.4c-34-33.2-80.6-53.8-132-53.8C84.4%2057.2%200%20141.7%200%20246s84.5%20188.7%20188.7%20188.7c91.3%200%20171.3-65%20188.8-151V225zm114.5%200h-36.2v-36.2h-31v36h-36v31h36v36h31v-36h36%22/%3E%3C/svg%3E') 7px center no-repeat, googleColor
+					background-size 30px 30px
+				&.vk
+					background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%20304.4%20304.4%22%3E%3Cpath%20d%3D%22M262%20175.6c10%209.8%2020.7%2019%2029.8%2030%204%204.8%207.7%209.8%2010.6%2015.4%204%208%20.4%2016.7-6.7%2017h-44.3c-11.5%201-20.6-3.5-28.3-11.4-6-6.2-11.5-13-17.4-19.3-2.4-2.7-5-5.2-8-7-6-4-11.3-2.8-14.8%203.5-3.5%206.4-4.3%2013.5-4.6%2020.7-.4%2010.4-3.6%2013-14%2013.6-22.5%201.4-43.7-2-63.5-13.3-17.4-10-31-24-42.7-40-23-31-40.4-65-56.2-100C-2%2076.4.6%2072%209.3%2072c14.5-.2%2029-.2%2043.4%200%206%200%209.8%203.5%2012%209%208%2019.3%2017.4%2037.6%2029.5%2054.6%203.2%204.5%206.4%209%2011%2012.2%205.2%203.5%209%202.4%2011.6-3.4%201.5-3.6%202.2-7.5%202.5-11.4%201.2-13.4%201.3-26.8-.7-40-1.2-8.4-6-13.8-14.2-15.4-4.3-.8-3.6-2.4-1.6-4.8%203.6-4%207-6.7%2013.6-6.7h50c8%201.8%209.8%205.4%2010.8%2013v56c0%203%201.6%2012.3%207.2%2014.3%204.4%201.4%207.3-2%2010-5%2012-12.7%2020.5-27.7%2028.2-43.3%203.4-7%206.3-14%209-21%202.2-5.4%205.5-8%2011.4-8h48.3c1.4%200%203%200%204.2.3%208.2%201.4%2010.4%205%208%2012.8-4%2012.6-11.8%2023-19.3%2033.4-8%2011.2-16.6%2022-24.6%2033-7.3%2010.3-6.8%2015.5%202.3%2024.4zm0%200%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22/%3E%3C/svg%3E') 6px center no-repeat, vkColor
+					background-size 30px 30px
+				&.ok
+					background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%2095.5%2095.5%22%3E%3Cpath%20d%3D%22M43%2067.3c-7.4-.8-14-2.6-19.7-7-.8-.7-1.5-1.2-2-1.8-2.6-2.4-3-5.2-1-8%201.8-2.4%204.6-3%207.6-1.7l1%201c11%207.2%2025.5%207.5%2036%20.2%201-.3%202.3-1%203.6-1.3%202.4-.7%205%20.3%206.2%202.5%201.5%202.6%201.4%205-.5%207-3%203-6.6%205.3-10.6%206.8-3.8%201.4-8%202.2-12%202.6L53%2069l17%2016.3c2%202%202.4%204.2%201.4%206.4-1%202.4-3.7%204-6%203.8-1.7%200-3-1-4-2-4-4-8.4-8.2-12.4-12.5-1.2-1.3-1.8-1-2.8%200L33.7%2093.7c-2%202-4.2%202.3-6.4%201.2-2.4-1.8-4-4-3.8-6%200-2%201-3%202-4l16.3-17%201.2-1z%22/%3E%3Cpath%20d%3D%22M47.5%2048.3c-13.2%200-24-11-24-24.2.2-13%2011-24%2024.3-24%2013.4%200%2024%2011%2024%2025%200%2013-11%2024-24.3%2023.8zm12-24.2c0-6-5.2-11.2-11.8-11.2C41%2012.8%2036%2018%2036%2024.8c0%206%205%2011.2%2011.5%2011.2s11.8-5.3%2011.8-12z%22/%3E%3C/svg%3E') 7px center no-repeat, okColor
+					background-size 30px 30px
+				span
+					display block
+					overflow hidden
+					width 0
+					padding 0
+					text-align left
+					transition all .5s ease
+				&:hover span
+					width 115px
+					padding 0 0 0 10px
+	#product-char
+		float right
+		margin 0
+		padding 20px
+		background red
+		.product-char-content
+			background white
+			font-size 14px
+			font-weight 300
+
+			padding 20px
+			line-height 24px
+			div
+				margin 0 0 10px
+			strong
+				font-weight 500
+
+#product-tabs
+	margin 45px 30px 0
+	#product-tabs-buttons
+		border-bottom 4px solid lightPink
+		.product-tab-button
+			display inline-block
+			color lightBlue
+			font-size 24px
+			line-height 45px
+			font-family futura
+			color lightBlue
+			padding 0 25px
+			cursor pointer
+			transition all .2s ease-in
+			&:hover
+				color pink
+			&.active
+				background lightPink
+				color white
+				position relative
+				&:before
+					width 100%
+					height 15px
+					position absolute
+					top -15px
+					left 0
+					content ""
+					display block
+					background: linear-gradient(to top right, lightPink 48%, transparent 52%), linear-gradient(to top right, transparent 50%, transparent 50%)
+
+
+
+#product-tabs-contents
+	padding 30px 0
+	color blue
+	.product-tab
+		display none
+		&.active
+			display block
+		.char-table
+			float left
+			width 470px
+			border-collapse collapse
+			td
+				width 50%
+				height 44px
+				font-size 14px
+				padding 0 25px
+				border 1px solid tableBorder
+			tr:nth-child(odd)
+				background tableBlue
+		.pordoct-description
+			float right
+			width 570px
+			line-height 24px
+			h2
+				font-size 24px
+				margin 0 0 30px
+				font-weight 700
+			h3
+				font-size 18px
+				margin 0 0 15px
+				font-weight 700
+			p
+				font-size 14px
+				font-weight 300
+				margin 0 0 30px
+			.product-brand
+				display block
+				width 200px
+				margin 0 0 15px
+				.to-brand-link
+					text-decoration underline
+					color blue
+					font-size 18px
+					font-weight 500
+					transition all .2s ease-in
+					&:hover
+						color pink
+		.review-item
+			width 770px
+			margin 0 0 30px
+			color blue
+			.review-autor
+				font-size 18px
+				font-weight 700
+				margin 0 0 10px
+			time
+				font-size 16px
+				font-weight 300
+				color reviewTimeColor
+				margin 15px 0 15px
+				display block
+			blockquote
+				line-height 24px
+				padding 20px 0 10px 100px
+				background url("../i/q.png") 30px 15px no-repeat
+			
+		#add-review
+			max-width 770px
+			input[type="text"]
+				display block
+				border 1px solid topGray
+				width calc(100% - 42px)
+				max-width 728px
+				line-height 40px
+				border-radius 3px
+				padding 0 20px
+				font-size 14px
+				margin 0 0 20px
+				color blue
+				font-weight 300
+				placeholder-color(blue)
+				transition all .2s ease-in
+				&:focus
+					border 1px solid blue
+					outline none
+					
+			textarea
+				display block
+				border 1px solid topGray
+				width calc(100% - 42px)
+				max-width 728px
+				line-height 24px
+				border-radius 3px
+				padding 10px 20px
+				font-size 14px
+				margin 0 0 20px
+				color blue
+				font-weight 300
+				placeholder-color(blue)
+				transition all .2s ease-in
+				resize none
+				height 90px
+				&:focus
+					border 1px solid blue
+					outline none
+			input[type="submit"]
+				float right
+				line-height 42px
+				border none
+				width 200px
+				border-radius 3px
+				background lightBlue
+				transition all .2s ease-in
+				color white
+				font-size 18px
+				font-weight 700
+				&:hover
+					background blue
+
+.recomendet-buttons
+	margin 50px 30px 30px
+	font-size 18px
+	border-bottom 3px solid lightBlue
+	.recomendet-button
+		display inline-block
+		color lightBlue
+		font-size 32px
+		line-height 45px
+		font-family futura
+		color lightBlue
+		padding 0 25px
+		cursor pointer
+		transition all .2s ease-in
+		&:hover
+			color pink
+		&.active
+			background lightBlue
+			color white
+			position relative
+			&:before
+				width 100%
+				height 15px
+				position absolute
+				top -15px
+				left 0
+				content ""
+				display block
+				background: linear-gradient(to top right, lightBlue 48%, transparent 52%), linear-gradient(to top right, transparent 50%, transparent 50%)
+
+.recomendet-tab-content
+	display none
+	&.active
+		display block
+
+
+@media screen and (max-width: 1230px)
+
+	#product-gallery
+		width calc(100% / 12 * 3)
+		margin 0 0 20px 20px
+
+	#product-content
+		width calc(100% / 12 * 8)
+		margin 0 20px 20px 0
+		#product-header
+			font-size 27px
+			&:after
+				height 3px
+		#product-info
+			width calc(50% + 20px)
+			.price-title
+				font-size 15px
+			.price-size
+				font-size 30px
+			#product-count
+				width 44px
+				line-height 20px
+			#product-add-to-cart
+				padding 0 0 0 45px
+				width 140px
+				line-height 30px
+				font-size 15px
+				background-size 35px 35px
+				// background-position 15px -8px
+				background-position 15px -4px
+			#product-share
+				a
+					line-height 30px
+					padding 0 0 0 30px
+					height 30px
+					background-size 18px 18px!important
+		#product-char
+			width calc(50% - 90px)
+			padding 20px
+			font-size 12px
+
+
+	#product-tabs-contents
+		.product-tab
+			.char-table
+				width calc(100% / 12 * 5)
+			.pordoct-description
+				width calc(100% / 12 * 6)
+				h2
+					font-size 12px
+					margin 0 0 15px
+				h3
+					font-size 10px
+					margin 0 0 15px
+				p
+					font-size 12px
+					margin 0 0 15px
+				.to-brand-link
+					font-size 15px
+
+			.review-item
+				width calc(100% / 12 * 8)
+				margin 0 0 20px
+				.review-autor
+					font-size 15px
+				time
+					font-size 13px
+				blockquote
+					line-height 20px
+					padding 10px 0 10px 80px
+					font-size 12px
+					background-position 15px 5px
+					background-size 25px auto
+			#add-review
+				width calc(100% / 12 * 8)
+				input[type="submit"]
+					line-height 35px
+					font-size 15px
+					width 170px
+
+
+	#product-tabs
+		margin 45px 20px 0
+		#product-tabs-buttons
+			border-bottom 3px solid lightPink
+			.product-tab-button
+				font-size 20px
+				line-height 40px
+
+
+
+	.recomendet-buttons
+		margin 50px 20px 30px
+		.recomendet-button
+			font-size 27px
+			line-height 40px
+
+	.recomendet-tab-content
+		.card
+			width calc(25% - 27px)
+
+
+@media screen and (max-width: 1023px)
+
+	#product-gallery
+		width calc(100% / 12 * 5 - 40px)
+
+	#product-content
+		width calc(100% / 12 * 7 - 40px)
+		#product-header
+			font-size 27px
+			&:after
+				height 3px
+		#product-info
+			width auto
+			float none
+		#product-char
+			display none
+		
+
+
+	#product-tabs-contents
+		.product-tab
+			.char-table
+				width 100%
+				float none
+			.pordoct-description
+				width calc(100% / 12 * 9)
+				position relative
+				float none
+				margin 30px 0 0
+				h2
+					font-size 22px
+					margin 0 0 20px
+				h3
+					font-size 18px
+					margin 0 0 20px
+				p
+					font-size 13px
+					margin 0 0 20px
+				.product-brand
+					width 125px
+					position absolute
+					left calc(100% + 40px)
+					top 0
+					text-align center
+					line-height normal
+					img
+						width 100%
+						height auto
+					.to-brand-link
+						font-size 10px
+
+			.review-item
+				width auto
+				margin 0 0 20px
+				.review-autor
+					font-size 16px
+				time
+					font-size 14px
+				blockquote
+					line-height 20px
+					padding 10px 0 10px 80px
+					font-size 12px
+					background-position 15px 5px
+					background-size 25px auto
+			#add-review
+				width auto
+				input[type="submit"]
+					line-height 35px
+					font-size 15px
+					width 170px
+
+
+	#product-tabs
+		#product-tabs-buttons
+			.product-tab-button
+				font-size 24px
+				line-height 40px
+
+
+
+	.recomendet-buttons
+		.recomendet-button
+			font-size 24px
+			line-height 40px
+
+	.recomendet-tab-content
+		.card
+			width calc( ((100% - 20px) / 3) - 22px);
+			&:last-child
+				display none
+
+
+@media screen and (max-width: 767px)
+
+	#product-gallery
+		width auto
+		margin 0 20px 20px
+		float none
+
+	#product-content
+		width auto
+		margin 20px
+		float none
+		#product-header
+			display none
+		#product-info
+			.price-size
+				font-size 36px
+			#product-share
+				a
+					line-height 40px
+					padding 0 0 0 40px
+					height 40px
+					background-size 28px 28px!important
+			#product-add-to-cart
+				padding 0 0 0 45px
+				width 170px
+				line-height 44px
+				font-size 18px
+				background-size 50px 50px
+
+
+
+	#product-tabs-contents
+		.product-tab
+			.char-table
+				font-size 12px
+				font-weight 300
+				tr
+					td
+						padding 0 10px
+			.pordoct-description
+				width auto
+				position static
+				float none
+				margin 30px 0 0
+				h2
+					font-size 20px
+					margin 0 0 15px
+				h3
+					font-size 15px
+					margin 0 0 15px
+				p
+					font-size 12px
+					margin 0 0 15px
+				.product-brand
+					position static
+			.review-item
+				width auto
+				margin 0 0 20px
+				.review-autor
+					font-size 13px
+				time
+					font-size 14px
+				blockquote
+					line-height 20px
+					padding 10px 0 10px 40px
+					font-size 12px
+					background-position 5px 5px
+					background-size 25px auto
+			#add-review
+				width auto
+				textarea
+					width calc(100% - 22px)
+					padding 10px
+					line-height 17px
+				input[type="text"]
+					width calc(100% - 22px)
+					padding 0 10px
+					
+				input[type="submit"]
+					float none
+					margin 0 auto
+					display block
+				
+
+
+	#product-tabs
+		#product-tabs-buttons
+			.product-tab-button
+				font-size 14px
+				line-height 30px
+
+
+
+	.recomendet-buttons
+		display none
+		.recomendet-button
+			font-size 14px
+			line-height 30px
+			padding 0 1
+
+	.recomendet-tab-content
+		display none!important

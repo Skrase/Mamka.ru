@@ -1,0 +1,35 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			section(id="content")
+				include components/breadcrumbs.jade
+				div(class="center clear")
+					h1(class="content-header") Личный кабинет
+
+					div(id="kabinet-tabs" class="clear")
+						a(href="#") Настройки профиля
+						a(href="#" class="active") История покупок
+						a(href="#") Просмотр корзины
+
+
+
+					- for(i=0; i<3; i++)
+						div(class="history-order clear")
+							div(class="history-order-title") Заказ А-20102016111 от 20.10.2016
+							div(class="history-order-product clear")
+								div(class="history-order-product-image")
+									img(src="i/card.png")
+								div(class="history-order-product-info")
+									a(href="#" class="history-order-product-name") Коляска Bebe mobile(Adamex) Toscana 2 в 1 - 1 шт.
+									div(class="history-order-product-code") Артикул 1000012231344
+									div(class="history-order-product-price") 39 900 ₽.
+									a(href="#" class="history-order-product-add-review") Оставить отзыв
+							div(class="history-order-check")
+								div(class="history-order-check-status") Статус: <strong>Выполнен</strong>
+								div(class="history-order-check-delivery") Способ получения: <strong>Курьер</strong>
+								div(class="history-order-check-summ") Итого: <strong>79 800 ₽</strong>

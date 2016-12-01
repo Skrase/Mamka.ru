@@ -1,0 +1,27 @@
+.subcategory-card
+	display block
+	float left
+	width calc(33.33333333% - 30px)
+	margin 0 0 30px 30px
+	img
+		border 1px solid subcategoryCardBorder
+		display block
+		width calc(100% - 2px)
+		transition all .2s ease-in
+	.subcategory-card-title
+		font-family futura
+		font-size 16px
+		color white
+		background sidebarBlue
+		transition all .2s ease-in
+		span
+			display table-cell
+			width 270px
+			padding 0 25px
+			height 57px
+			vertical-align middle
+	&:hover
+		img
+			border 1px solid lightPink
+		.subcategory-card-title
+			background lightPink

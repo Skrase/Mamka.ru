@@ -1,0 +1,80 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			section(id="content")
+				include components/breadcrumbs.jade
+				div(class="center clear")
+					h1(class="content-header") Подтверждение заказа
+
+					form(id="order-left")
+						div(class="clear")
+							h2 Ваши персональные данные
+
+							div(class="order-input-block")
+								label(for="name") Имя
+								input(type="text" name="name")
+
+							div(class="order-input-block")
+								label(for="sername") Фамилия
+								input(type="text" name="sername")
+
+							div(class="order-input-block")
+								label(for="email") E-mail
+								input(type="email" name="email")
+
+							div(class="order-input-block")
+								label(for="index") Индекс
+								input(type="text" name="index")
+
+							div(class="order-input-block")
+								label(for="city") Город
+								input(type="text" name="city")
+
+							div(class="order-input-block")
+								label(for="address") Улица, дом, картира
+								input(type="text" name="address")
+
+								label(class="checkbox-ui send-checkbox")
+									input(type="checkbox" name="send")
+									div(class="checkbox-item")
+									div Отправить на этот адрес
+
+							div(class="order-input-block")
+								label(for="address") Телефонный номер
+								input(type="text" name="address")
+
+						div(class="order-input-block")
+							h3 Метод оплаты
+							label(class="checkbox-ui")
+								input(type="checkbox" name="credit")
+								div(class="checkbox-item")
+								div Кредитная карта
+							label(class="checkbox-ui")
+								input(type="checkbox" name="paypal")
+								div(class="checkbox-item")
+								div Paypal
+							label(class="checkbox-ui")
+								input(type="checkbox" name="qiwi-wallet")
+								div(class="checkbox-item")
+								div Qiwi wallet
+
+						div(class="order-input-block")
+							h3 Доставка
+							label(class="checkbox-ui")
+								input(type="checkbox" name="courier")
+								div(class="checkbox-item")
+								div Курьером
+							label(class="checkbox-ui")
+								input(type="checkbox" name="point")
+								div(class="checkbox-item")
+								div Пункт выдачи
+						div(class="clear order-buttons")
+							a(href="#" class="to-cart") Вернутся в корзину
+							a(href="#" class="to-pay") Перейти к оплате
+					div(id="order-right")
+						img(src="i/order.png")

@@ -1,0 +1,52 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			include components/breadcrumbs.jade
+			section(id="content")
+				div(class="center clear")
+					h1(class="content-header") Доставка
+					div(class="promo-block clear")
+						div(class="promo-item mobile-hide")
+							img(src="i/delivery.png")
+
+						div(class="promo-item promo-text")
+							
+							h2(class="promo-header courier-header") Курьером
+
+
+							p(class="with-icon box-icon") Доставка по г. Ростову-на-Дону свыше <strong>6000 руб</strong>. бесплатна, в область и другие регионы доставка оплачивается по тарифам в <a href="#"><strong>таблице</strong></a>.
+
+							p(class="with-icon restart-icon") Осуществляется в течении <strong>3-5 рабочих дней</strong>, в зависимости от загруженности курьерской службы.
+
+							p(class="with-icon card-icon") Оплата наличными, либо картой <strong>Maestro</strong> или <strong>Visa</strong>
+
+
+					div(class="promo-block clear")
+
+						div(class="promo-item")
+							
+							h2(class="promo-header points-header") Пункт выдачи
+							div(class="points-select-block clear")
+								div(class="points-select-label") Выбрать город
+								div(class="points-select") Ростов-на-Дону
+
+
+							p(class="point-item") <a href='#' class="point-item-header">Красноармейская 155 А, офис 5</a> <br> с 09:00 - 22:00 <br> тел. <a href="#"> 8 (928) 710 - 67-76</a>
+
+
+							p(class="point-item") <a href='#' class="point-item-header">Ленина 14 А, офис 5</a> <br> с 09:00 - 22:00 <br> тел. <a href="#"> 8 (928) 710 - 67-76</a>
+
+							button(id="show-all-cities") Показать все города
+
+						div(class="promo-item promo-map") <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=9ZW-UVDM9DfE31c5rifG3tJ5WtszpekR&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+					div(id="all-cities" class="clear")
+						- for(i=0; i<3; i++)
+							div(class="city-item")
+								div(class="city-header") г. Краснодар
+								p(class="point-item") <a href='#' class="point-item-header">Ленина 14 А, офис 5</a> <br> с 09:00 - 22:00 <br> тел. <a href="#"> 8 (928) 710 - 67-76</a>
+								p(class="point-item") <a href='#' class="point-item-header">Ленина 14 А, офис 5</a> <br> с 09:00 - 22:00 <br> тел. <a href="#"> 8 (928) 710 - 67-76</a>

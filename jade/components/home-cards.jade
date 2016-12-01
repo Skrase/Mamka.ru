@@ -1,0 +1,9 @@
+section(id="home-cards")
+	div(class="center clear")
+		div(id="home-cards-buttons" class="clear")
+			div(class="home-cards-button active") Скидки
+			div(class="home-cards-button") Новинки
+			div(class="home-cards-button") Хиты продаж
+		div(class="home-cards-tab")
+			-for(i=0; i<4; i++)
+				include card.jade

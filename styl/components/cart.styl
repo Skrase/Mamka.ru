@@ -1,0 +1,165 @@
+#cart-table
+	width calc(100%- 60px)
+	margin 0 30px
+	color blue
+	border-collapse collapse
+	th
+		font-size 14px
+		font-weight 300
+		text-align center
+		padding 20px 0 16px
+	td
+
+		&.cart-image
+			border 1px solid cartBorder
+			width 85px
+			height 85px
+		&.cart-title
+			font-size 16px
+			font-weight 500
+			border-top 1px solid cartBorder
+			border-bottom 1px solid cartBorder
+			padding 20px 30px
+			width 26.5%
+			vertical-align middle
+			a
+				color blue
+		&.cart-count
+			width 17.09%
+			text-align left
+			border-top 1px solid cartBorder
+			border-bottom 1px solid cartBorder
+			.count-picker
+				display inline-block
+		&.cart-price
+			width 16.666666%
+			text-align center
+			font-size 24px
+			font-weight 700
+			border-top 1px solid cartBorder
+			border-bottom 1px solid cartBorder
+		&.cart-new-price
+			width 25%
+			text-align center
+			font-size 24px
+			font-weight 700
+			border-top 1px solid cartBorder
+			border-bottom 1px solid cartBorder
+		&.revove
+			width 70px
+			border-top 1px solid cartBorder
+			border-bottom 1px solid cartBorder
+			text-align right
+			button.revove
+				margin 0 3px
+				width 15px
+				border none
+				background transparent
+				height 15px
+				position relative
+				cursor pointer
+				span
+					display none
+				&:before
+					position absolute
+					width 21px
+					height 1px
+					background cartRemove
+					display block
+					content ""
+					top 0
+					left 0
+					transform rotate(45deg)
+					transform-origin 0 0
+					transition all .2s ease-in
+				&:after
+					position absolute
+					width 21px
+					height 1px
+					background cartRemove
+					display block
+					content ""
+					top 0
+					right 0
+					transform rotate(-45deg)
+					transform-origin 21px 0
+					transition all .2s ease-in
+				&:hover:after, &:hover:before
+					background pink
+	.cart-footer td
+		padding 20px 0
+		&.discount-block
+			input
+				vertical-align top
+				padding 0 10px
+				width 150px
+				border 1px solid topGray
+				border-radius 3px
+				line-height 40px
+				color blue
+				font-size 14px
+				font-weight 300
+				margin 0 10px 0 0
+			button
+				vertical-align top
+				width 200px
+				border-radius 2px
+				line-height 42px
+				border none
+				background sidebarBlue
+				cursor pointer
+				color white
+				font-size 18px
+				font-weight 700
+				transition all .2s ease-in
+				&:hover
+					background blue
+		&.discount-title
+			text-align right
+			font-size 16px
+			font-weight 300
+		&.discount-size
+			text-align center
+			font-size 24px
+			font-weight 700
+		&.sum-with-discount
+			font-size 24px
+			font-weight 700
+			text-align center
+		&.delivery-size
+			font-size 16px
+			font-weight 300
+			text-align center
+		&.delivery-title
+			font-size 16px
+			font-weight 300
+			text-align center
+		&.sum-title
+			font-size 16px
+			font-weight 500
+			text-align center
+		&.sum-size
+			font-size 36px
+			font-weight 700
+			color pink
+			text-align center
+		&.to-shop
+			text-align center
+			a
+				font-size 18px
+				font-weight 300
+				color blue
+				margin 0 20px 0 0
+				text-decoration underline
+		&.to-order
+			text-align center
+			a
+				display inline-block
+				background lightBlue
+				color white
+				width 280px
+				line-height 42px
+				border-radius 3px
+				transition all .2s ease-in
+				&:hover
+					background blue

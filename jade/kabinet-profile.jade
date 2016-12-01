@@ -1,0 +1,49 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			section(id="content")
+				include components/breadcrumbs.jade
+				div(class="center clear")
+					h1(class="content-header") Личный кабинет
+
+					div(id="kabinet-tabs" class="clear")
+						a(href="#" class="active") Настройки профиля
+						a(href="#") История покупок
+						a(href="#") Просмотр корзины
+
+
+					form(action="#" id="profile-left")
+						div(class="input-row clear")
+							label(for="name") Имя<span>*</span>
+							input(type="text" name="name" required)
+						div(class="input-row clear")
+							label(for="sername") Фамилия<span>*</span>
+							input(type="text" name="sername" required)
+						div(class="input-row clear")
+							label(for="date") Дата рождения
+							input(type="text" name="date")
+						div(class="input-row clear")
+							label(for="E-mail") E-mail
+							input(type="email" name="E-mail")
+						div(class="input-row clear")
+							label(for="index") Индекс<span>*</span>
+							input(type="text" name="index" required)
+						div(class="input-row clear")
+							label(for="city") Город<span>*</span>
+							input(type="text" name="city" required)
+						div(class="input-row clear")
+							label(for="address") Улица, дом, квартира<span>*</span>
+							input(type="text" name="address" required)
+						div(class="input-row clear")
+							label(for="tel") Телефон<span>*</span>
+							input(type="tel" name="tel" required)
+
+						div(id="profile-left-info") <span>*</span> Поля обязательные для заполнения
+						input(type="submit" value="Сохранить")
+					div(id="profile-right")
+						img(src="i/profile.png")

@@ -1,0 +1,156 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			section(id="content")
+				include components/breadcrumbs.jade
+				div(class="center clear")
+					div(id="product-gallery")
+						img(src="i/card.png" id="big-product-image")
+						div(class="clear" id="small-product-image")
+							img(src="i/card.png")
+							img(src="i/card.png")
+							img(src="i/card.png")
+
+
+					div(id="product-content")
+						h1(id="product-header") Коляска CAM Dinamico
+						div(id="product-info")
+							div(class="product-stars")
+							a(href='#' class="to-reviews") 2 отзыва
+
+							p Не большое описание товара, характеризующее его основное назначение для использования, возможно какие то свойства отличающие товар от других товаров
+
+							div(class="price-title") Цена:
+							form(class="clear")
+								div(class="clear")
+									div(class="price-size") 14 000 ₽.
+									input(type="number" id="product-count")
+
+								button(id="product-add-to-cart") Купить
+
+								button(id="like-button")
+									include ../icons/heart.svg
+									span в избранное
+
+							div(class="product-in-store") Товар на складе: <span class="green">В наличии</span>
+
+							div(id="product-share" class="clear")
+								a(href="#" class="google")
+									span Поделится
+								a(href="#" class="vk")
+									span Поделится
+								a(href="#" class="ok")
+									span Поделится
+
+						div(id="product-char")
+							div(class="product-char-content")
+								div Артикул:
+									strong 884005735365
+								div Бренд:
+									strong Моя Горошинка (Россия)
+								div Материал:
+									strong 100% Хлопок
+								div Вес:
+									strong 0.1 кг.
+								div Сезонность:
+									strong Осень-Зима 2016
+								div Вес:
+									strong 6,9 кг
+
+				div(class="center")
+					div(id="product-tabs")
+						div(id="product-tabs-buttons")
+							div(class="product-tab-button active") Подробнее
+							div(class="product-tab-button") Отзывы (2)
+
+						div(id="product-tabs-contents")
+							div(class="product-tabs-contents")
+								div(class="product-tab clear")
+									table(class="char-table")
+										tr
+											td Наименование х-ки
+											td Характеристика
+										tr
+											td Страна
+											td Характеристика
+										tr
+											td Тип
+											td Характеристика
+										tr
+											td Материал
+											td Характеристика
+										tr
+											td Вес
+											td Характеристика
+										tr
+											td Артикул
+											td Характеристика
+										tr
+											td Торговая марка
+											td Характеристика
+										tr
+											td Механизм складывания
+											td Характеристика
+										tr
+											td Тип
+											td Характеристика
+										tr
+											td Материал
+											td Характеристика
+										tr
+											td Вес
+											td Характеристика
+										tr
+											td Артикул
+											td Характеристика
+										tr
+											td Торговая марка
+											td Характеристика
+										tr
+											td Механизм складывания
+											td Характеристика
+
+
+									div(class="pordoct-description")
+										h2 Заголовок
+										p Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.
+										h3 Заголовок
+										p Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.
+										div(class="product-brand")
+											img(src="i/Tinylove-Logo.png")
+											a(href="#" class="to-brand-link") Посмотреть все товары Peg-Perego
+
+								div(class="product-tab active clear")
+
+									div(class="review-item")
+										div(class="review-autor") Марина
+										time 29.09.2016
+										blockquote Отличная коляска, проходимость за счет надувных колёс очень хорошая, катить можно одной рукой! качественной сборки.очень рекомендую!
+
+									div(class="review-item")
+										div(class="review-autor") Марина
+										time 29.09.2016
+										blockquote Пользуюсь всего пару недель. Удобный капюшон-батискаф, полностью закрывает ребенка. Большой чехол на ноги, но он почему то никак не крепится снизу, и когда был сильный ветер его просто загибало. Есть положение лежа. Длинное и широкое спальное место. Удобный столик для мамы. Мне кажется что коляска гремит сильнее чем могла бы, ожидала что будет мягче. Высокая ручка, но привыкла быстро.
+
+									form(id="add-review")
+										input(type="text" name="name" placeholder="Имя")
+										textarea(placeholder="Нам будет очень приятно, если вы оставите свой отзыв на сайте")
+										input(type="submit" value="Отправить отзыв")
+
+					div(class="recomendet-block")
+						div(class="recomendet-buttons")
+							div(class="recomendet-button active") Покупают вместе
+							div(class="recomendet-button") Недавно просмотренные
+						div(class="recomendet-tabs active")
+							div(class="recomendet-tab-content active")
+								- for(i=0; i<4; i++)
+									include components/card.jade
+						div(class="recomendet-tabs")
+							div(class="recomendet-tab-content")
+								- for(i=0; i<4; i++)
+									include components/card.jade

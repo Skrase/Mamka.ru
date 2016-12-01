@@ -1,0 +1,63 @@
+.history-order
+	position relative
+	color blue
+	margin 0 30px
+	border-bottom 1px solid cartBorder
+	&:last-child
+		border-bottom none
+	.history-order-title
+		font-size 16px
+		font-weight 500
+		line-height 50px
+		border-bottom 1px solid cartBorder
+	.history-order-product
+		padding 15px 0
+		.history-order-product-image
+			float left
+			margin 0 0 0 170px
+			width 120px
+			height 120px
+		.history-order-product-info
+			float left
+			margin 0 0 0 30px
+			.history-order-product-name
+				display block
+				color blue
+				font-size 16px
+				font-weight 500
+				transition all .2s ease-in
+				margin 10px 0 5px
+				&:hover
+					color pink
+			.history-order-product-code
+				font-size 14px
+				font-weight 300
+			.history-order-product-price
+				font-size 20px
+				font-weight 700
+				margin 10px 0 5px
+			.history-order-product-add-review
+				font-size 16px
+				font-weight 300
+				color historyLink
+				text-decoration underline
+				transition all .2s ease-in
+				&:hover
+					color pink
+	.history-order-check
+		position absolute
+		width 220px
+		right 0
+		top 74px
+		font-size 16px
+		line-height 24px
+		font-weight 300
+		strong
+			font-weight 500
+		.history-order-check-status
+			margin 5px 0 0
+		.history-order-check-summ
+			margin 10px 0 0
+			font-size 20px
+			strong
+				font-weight 700
