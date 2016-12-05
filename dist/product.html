@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header id="header">
@@ -20,8 +22,8 @@
               <li><a href="#">Контакты</a></li>
             </ul>
           </div>
-          <button id="login-button">Личный кабинет</button>
-          <button id="connect-button"><span>Свяжитесь с нами</span></button><a href="tel:88632334050" id="header-tel">8 863 233 40 50</a>
+          <button id="login-button" data-modal="login-modal" class="modal-open">Личный кабинет</button>
+          <button id="connect-button" data-modal="call-you-modal" class="modal-open"><span>Свяжитесь с нами</span></button><a href="tel:88632334050" id="header-tel">8 863 233 40 50</a>
         </div>
       </div>
       <div id="mid-header">
@@ -67,7 +69,7 @@
         </div><a id="mobile-crumb" href="#">Бренды</a>
         <div class="center clear">
           <div id="product-gallery"><img src="i/card.png" id="big-product-image">
-            <div id="small-product-image" class="clear"><img src="i/card.png"><img src="i/card.png"><img src="i/card.png"></div>
+            <div id="small-product-image" class="clear"><img src="i/actions.png"><img src="i/card.png"><img src="i/card.png"></div>
           </div>
           <div id="product-content">
             <h1 id="product-header">Коляска CAM Dinamico</h1>
@@ -100,97 +102,95 @@
           </div>
         </div>
         <div class="center">
-          <div id="product-tabs">
-            <div id="product-tabs-buttons">
-              <div class="product-tab-button active">Подробнее</div>
-              <div class="product-tab-button">Отзывы (2)</div>
+          <div id="product-tabs" class="tabs">
+            <div id="product-tabs-buttons" class="tabs-buttons">
+              <div class="product-tab-button tab-button active">Подробнее</div>
+              <div class="product-tab-button tab-button">Отзывы (2)</div>
             </div>
-            <div id="product-tabs-contents">
-              <div class="product-tabs-contents">
-                <div class="product-tab clear">
-                  <table class="char-table">
-                    <tr>
-                      <td>Наименование х-ки</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Страна</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Тип</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Материал</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Вес</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Артикул</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Торговая марка</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Механизм складывания</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Тип</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Материал</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Вес</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Артикул</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Торговая марка</td>
-                      <td>Характеристика</td>
-                    </tr>
-                    <tr>
-                      <td>Механизм складывания</td>
-                      <td>Характеристика</td>
-                    </tr>
-                  </table>
-                  <div class="pordoct-description">
-                    <h2>Заголовок</h2>
-                    <p>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.</p>
-                    <h3>Заголовок</h3>
-                    <p>Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.</p>
-                    <div class="product-brand"><img src="i/Tinylove-Logo.png"><a href="#" class="to-brand-link">Посмотреть все товары Peg-Perego</a></div>
-                  </div>
+            <div id="product-tabs-contents" class="tabs-contents">
+              <div class="product-tab clear tab-content">
+                <table class="char-table">
+                  <tr>
+                    <td>Наименование х-ки</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Страна</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Тип</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Материал</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Вес</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Артикул</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Торговая марка</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Механизм складывания</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Тип</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Материал</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Вес</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Артикул</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Торговая марка</td>
+                    <td>Характеристика</td>
+                  </tr>
+                  <tr>
+                    <td>Механизм складывания</td>
+                    <td>Характеристика</td>
+                  </tr>
+                </table>
+                <div class="pordoct-description">
+                  <h2>Заголовок</h2>
+                  <p>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.</p>
+                  <h3>Заголовок</h3>
+                  <p>Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.</p>
+                  <div class="product-brand"><img src="i/Tinylove-Logo.png"><a href="#" class="to-brand-link">Посмотреть все товары Peg-Perego</a></div>
                 </div>
-                <div class="product-tab active clear">
-                  <div class="review-item">
-                    <div class="review-autor">Марина</div>
-                    <time>29.09.2016</time>
-                    <blockquote>Отличная коляска, проходимость за счет надувных колёс очень хорошая, катить можно одной рукой! качественной сборки.очень рекомендую!</blockquote>
-                  </div>
-                  <div class="review-item">
-                    <div class="review-autor">Марина</div>
-                    <time>29.09.2016</time>
-                    <blockquote>Пользуюсь всего пару недель. Удобный капюшон-батискаф, полностью закрывает ребенка. Большой чехол на ноги, но он почему то никак не крепится снизу, и когда был сильный ветер его просто загибало. Есть положение лежа. Длинное и широкое спальное место. Удобный столик для мамы. Мне кажется что коляска гремит сильнее чем могла бы, ожидала что будет мягче. Высокая ручка, но привыкла быстро.</blockquote>
-                  </div>
-                  <form id="add-review">
-                    <input type="text" name="name" placeholder="Имя">
-                    <textarea placeholder="Нам будет очень приятно, если вы оставите свой отзыв на сайте"></textarea>
-                    <input type="submit" value="Отправить отзыв">
-                  </form>
+              </div>
+              <div class="product-tab tab-content active clear">
+                <div class="review-item">
+                  <div class="review-autor">Марина</div>
+                  <time>29.09.2016</time>
+                  <blockquote>Отличная коляска, проходимость за счет надувных колёс очень хорошая, катить можно одной рукой! качественной сборки.очень рекомендую!</blockquote>
                 </div>
+                <div class="review-item">
+                  <div class="review-autor">Марина</div>
+                  <time>29.09.2016</time>
+                  <blockquote>Пользуюсь всего пару недель. Удобный капюшон-батискаф, полностью закрывает ребенка. Большой чехол на ноги, но он почему то никак не крепится снизу, и когда был сильный ветер его просто загибало. Есть положение лежа. Длинное и широкое спальное место. Удобный столик для мамы. Мне кажется что коляска гремит сильнее чем могла бы, ожидала что будет мягче. Высокая ручка, но привыкла быстро.</blockquote>
+                </div>
+                <form id="add-review">
+                  <input type="text" name="name" placeholder="Имя">
+                  <textarea placeholder="Нам будет очень приятно, если вы оставите свой отзыв на сайте"></textarea>
+                  <input type="submit" value="Отправить отзыв">
+                </form>
               </div>
             </div>
           </div>

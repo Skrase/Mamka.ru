@@ -12,18 +12,20 @@ html
 					h1(class="content-header") Личный кабинет
 
 					div(id="kabinet-tabs" class="clear")
-						a(href="#") Настройки профиля
-						a(href="#") История покупок
-						a(href="#" class="active") Просмотр корзины
+						div(id="kabinet-tabs-wrapper")
+							a(href="#") Настройки профиля
+							a(href="#") История покупок
+							a(href="#" class="active") Просмотр корзины
 
 
 
 					table(id="cart-table")
-						tr
-							th(colspan="3")
-							th Цена
-							th Цена со скидкой
-							th
+						thead
+							tr(class="empty")
+								th(colspan="3")
+								th Цена
+								th Цена со скидкой
+								th
 						tr
 							td(class="cart-image")
 								img(src="i/card.png")
@@ -47,28 +49,28 @@ html
 								button(class="discount-button") Получить скидку
 							td(class="discount-title") Ваша скидка
 							td(class="discount-size") 5%
-							td(class="sum-with-discount") <s>42 000 ₽.</s>
-							td
+							td(class="sum-without-discount") <s>42 000 ₽.</s>
+							td(class="empty")
 
 						tr(class="cart-footer")
-							td(colspan="3")
+							td(colspan="3" class="empty")
 
 							td(class="delivery-title") Доставка
 							td(class="delivery-size") Бесплатная
-							td
+							td(class="empty")
 
 						tr(class="cart-footer")
-							td(colspan="3")
+							td(colspan="3" class="empty")
 
 							td(class="sum-title") Итого
 							td(class="sum-size") 39 900 ₽.
-							td
+							td(class="empty")
 
 						tr(class="cart-footer")
-							td(colspan="3")
+							td(colspan="3" class="empty")
 
 							td(class="to-shop")
 								a(href="#") Вернутся к покупкам
 							td(class="to-order") 
-								a(href="#") Вернутся к покупкам
-							td
+								a(href="#") Перейти к оформлению
+							td(class="empty")

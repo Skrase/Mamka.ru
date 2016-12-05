@@ -1,0 +1,25 @@
+doctype
+html
+	head
+		include components/meta.jade
+	body
+		include components/header.jade
+
+		main
+			section(id="content")
+				include components/breadcrumbs.jade
+				div(class="center clear")
+					h1(class="content-header") Доставка
+					div(class="clear")
+						- for(i=0; i<8; i++)
+							include components/inside-action-card.jade
+					div(id="pagination")
+						a(href="#") <
+						a(href="#") 1
+						a(href="#") 2
+						a(href="#") ...
+						a(href="#") 10
+						a(href="#") >
+
+
+			include components/footer.jade

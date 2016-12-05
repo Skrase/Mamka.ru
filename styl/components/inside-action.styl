@@ -1,0 +1,38 @@
+.inside-action
+	float left
+	display block
+	width calc((100% - 30px) / 4 - 30px)
+	margin 0 0 30px 30px
+	color blue
+	img
+		display block
+		width 100%
+		height auto
+	.inside-action-title
+		height 48px
+		line-height 24px
+		font-size 16px
+		text-transform uppercase
+		padding 15px 0 5px
+		border-bottom 2px solid lightBlue
+		overflow hidden
+		font-weight 500
+	.inside-action-time
+		font-size 16px
+		padding 15px 0 0
+		font-weight 500
+		display block
+
+@media screen and (max-width: 1230px)
+	.inside-action
+		width calc((100% - 20px) / 3 - 20px)
+		margin 0 0 30px 20px
+@media screen and (max-width: 1023px)
+	.inside-action
+		width calc((100% - 20px) / 2 - 20px)
+
+@media screen and (max-width: 767px)
+	.inside-action
+		width auto
+		float none
+		margin 0 20px 30px

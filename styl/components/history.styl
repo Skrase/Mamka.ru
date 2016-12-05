@@ -10,6 +10,7 @@
 		font-weight 500
 		line-height 50px
 		border-bottom 1px solid cartBorder
+		border-bottom 1px solid cartBorder
 	.history-order-product
 		padding 15px 0
 		.history-order-product-image
@@ -61,3 +62,96 @@
 			font-size 20px
 			strong
 				font-weight 700
+
+
+@media screen and (max-width: 1230px)
+
+	.history-order
+		margin 0 20px
+		.history-order-title
+			font-size 14px
+		.history-order-product
+			.history-order-product-image
+				margin-left calc((100% / 12) * 2)
+			.history-order-product-info
+				margin 0 0 0 20px
+				.history-order-product-name
+					font-size 14px
+				.history-order-product-code
+					font-size 11px
+				.history-order-product-price
+					font-size 17px
+				.history-order-product-add-review
+					font-size 13px
+		.history-order-check
+			width 200px
+			font-size 13px
+			.history-order-check-summ
+				font-size 17px
+
+@media screen and (max-width: 1023px)
+
+	.history-order
+		.history-order-title
+			font-size 15px
+		.history-order-product
+			.history-order-product-image
+				margin 0
+				// margin-left calc((100% / 12) * 2)
+			.history-order-product-info
+				width calc(((100% / 12) * 6) - 20px)
+				.history-order-product-name
+					font-size 15px
+				.history-order-product-code
+					font-size 13px
+				.history-order-product-price
+					font-size 19px
+				.history-order-product-add-review
+					font-size 15px
+		.history-order-check
+			width 185px
+			font-size 15px
+			.history-order-check-summ
+				font-size 19px
+
+@media screen and (max-width: 767px)
+
+	.history-order
+		margin 0
+		padding 0 20px
+		.history-order-title
+			font-size 16px
+			margin 0 -20px
+			padding 0 20px
+		.history-order-product
+			.history-order-product-image
+				display none
+			.history-order-product-info
+				margin 0
+				width auto
+				position relative
+				float none
+				.history-order-product-name
+					font-size 14px
+					width 65%
+				.history-order-product-code
+					font-size 12px
+					width 65%
+				.history-order-product-price
+					font-size 19px
+					position absolute
+					right 0
+					top 0
+					margin 0
+					width 30%
+				.history-order-product-add-review
+					display none
+		.history-order-check
+			position static
+			margin 20px 0 15px
+			.history-order-check-status
+				display none
+			.history-order-check-delivery
+				display none
+			.history-order-check-summ
+				font-size 19px

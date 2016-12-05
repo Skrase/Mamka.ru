@@ -1,0 +1,339 @@
+#footer
+	margin 30px 0 0
+	background footerBg
+	.top-footer
+		padding 30px 0
+	#show-more-foot-navs
+		display none
+	#company-info
+		float left
+		margin 0 0 0 30px
+		width calc(((100% / 12) * 3) - 30px)
+		#footer-call-you
+			border none
+			background transparent
+			display block
+			font-size 12px
+			color blue
+			font-weight 500
+			text-align left
+			border-bottom 1px dashed blue
+			margin 15px 0 0
+			cursor pointer
+			transition all .2s ease-in
+			&:hover
+				color pink
+				border-bottom 1px dashed pink
+		#footer-tel
+			font-size 30px
+			line-height 50px
+			display block
+			color blue
+			font-weight 500
+			transition all .2s ease-in
+			&:hover
+				color pink
+		#footer-social
+			color blue
+			font-size 12px
+			font-weight 500
+			margin 15px 0 0
+			text-transform uppercase
+			a
+				display inline-block
+				width 33px
+				height 33px
+				margin 10px 4px 0 0
+				border-radius 2px
+				&.google
+					background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%20491.9%20491.9%22%3E%3Cpath%20d%3D%22M377.5%20225H201.3v58.7h107.5c-16%2051-63.7%2088-120%2088-69.6%200-126-56.3-126-125.8%200-69.7%2056.4-126%20126-126%2035%200%2066.6%2014.3%2089.4%2037.4l42.6-46.4c-34-33.2-80.6-53.8-132-53.8C84.4%2057.2%200%20141.7%200%20246s84.5%20188.7%20188.7%20188.7c91.3%200%20171.3-65%20188.8-151V225zm114.5%200h-36.2v-36.2h-31v36h-36v31h36v36h31v-36h36%22/%3E%3C/svg%3E') center center no-repeat, googleColor
+					background-size 22px 22px
+				&.vk
+					background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%20304.4%20304.4%22%3E%3Cpath%20d%3D%22M262%20175.6c10%209.8%2020.7%2019%2029.8%2030%204%204.8%207.7%209.8%2010.6%2015.4%204%208%20.4%2016.7-6.7%2017h-44.3c-11.5%201-20.6-3.5-28.3-11.4-6-6.2-11.5-13-17.4-19.3-2.4-2.7-5-5.2-8-7-6-4-11.3-2.8-14.8%203.5-3.5%206.4-4.3%2013.5-4.6%2020.7-.4%2010.4-3.6%2013-14%2013.6-22.5%201.4-43.7-2-63.5-13.3-17.4-10-31-24-42.7-40-23-31-40.4-65-56.2-100C-2%2076.4.6%2072%209.3%2072c14.5-.2%2029-.2%2043.4%200%206%200%209.8%203.5%2012%209%208%2019.3%2017.4%2037.6%2029.5%2054.6%203.2%204.5%206.4%209%2011%2012.2%205.2%203.5%209%202.4%2011.6-3.4%201.5-3.6%202.2-7.5%202.5-11.4%201.2-13.4%201.3-26.8-.7-40-1.2-8.4-6-13.8-14.2-15.4-4.3-.8-3.6-2.4-1.6-4.8%203.6-4%207-6.7%2013.6-6.7h50c8%201.8%209.8%205.4%2010.8%2013v56c0%203%201.6%2012.3%207.2%2014.3%204.4%201.4%207.3-2%2010-5%2012-12.7%2020.5-27.7%2028.2-43.3%203.4-7%206.3-14%209-21%202.2-5.4%205.5-8%2011.4-8h48.3c1.4%200%203%200%204.2.3%208.2%201.4%2010.4%205%208%2012.8-4%2012.6-11.8%2023-19.3%2033.4-8%2011.2-16.6%2022-24.6%2033-7.3%2010.3-6.8%2015.5%202.3%2024.4zm0%200%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22/%3E%3C/svg%3E') center center no-repeat, vkColor
+					background-size 22px 22px
+				&.ok
+					background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20fill%3D%22%23FFF%22%20viewBox%3D%220%200%2095.5%2095.5%22%3E%3Cpath%20d%3D%22M43%2067.3c-7.4-.8-14-2.6-19.7-7-.8-.7-1.5-1.2-2-1.8-2.6-2.4-3-5.2-1-8%201.8-2.4%204.6-3%207.6-1.7l1%201c11%207.2%2025.5%207.5%2036%20.2%201-.3%202.3-1%203.6-1.3%202.4-.7%205%20.3%206.2%202.5%201.5%202.6%201.4%205-.5%207-3%203-6.6%205.3-10.6%206.8-3.8%201.4-8%202.2-12%202.6L53%2069l17%2016.3c2%202%202.4%204.2%201.4%206.4-1%202.4-3.7%204-6%203.8-1.7%200-3-1-4-2-4-4-8.4-8.2-12.4-12.5-1.2-1.3-1.8-1-2.8%200L33.7%2093.7c-2%202-4.2%202.3-6.4%201.2-2.4-1.8-4-4-3.8-6%200-2%201-3%202-4l16.3-17%201.2-1z%22/%3E%3Cpath%20d%3D%22M47.5%2048.3c-13.2%200-24-11-24-24.2.2-13%2011-24%2024.3-24%2013.4%200%2024%2011%2024%2025%200%2013-11%2024-24.3%2023.8zm12-24.2c0-6-5.2-11.2-11.8-11.2C41%2012.8%2036%2018%2036%2024.8c0%206%205%2011.2%2011.5%2011.2s11.8-5.3%2011.8-12z%22/%3E%3C/svg%3E') center center no-repeat, okColor
+					background-size 22px 22px
+				&.mail
+					background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D%22%23ffa930%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22-119.65%20-200.1%2095%2091%22%3E%3Cpath%20fill%3D%22%23134785%22%20d%3D%22M515.4%20117.3c0%208.27-6.76%2015.04-15.03%2015.04H15.04C6.77%20132.34%200%20125.57%200%20117.3V15.04C0%206.77%206.77%200%2015.04%200h485.33c8.27%200%2015.04%206.77%2015.04%2015.04V117.3%22/%3E%3Cpath%20d%3D%22M-55.9-155.03c-.54-10.4-8.26-16.65-17.58-16.65h-.35c-10.76%200-16.73%208.46-16.73%2018.07%200%2010.75%207.22%2017.55%2016.68%2017.55%2010.55%200%2017.5-7.73%2018-16.88l-.03-2.1zm-17.88-25.95c7.2%200%2013.94%203.18%2018.9%208.15v.02c0-2.4%201.6-4.2%203.84-4.2h.57c3.5%200%204.2%203.3%204.2%204.35l.02%2037.12c-.25%202.44%202.5%203.7%204.04%202.13%205.95-6.13%2013.08-31.5-3.72-46.2-15.66-13.7-36.67-11.44-47.84-3.74-11.88%208.2-19.48%2026.33-12.1%2043.36%208.05%2018.57%2031.08%2024.1%2044.77%2018.58%206.94-2.8%2010.14%206.58%202.94%209.64-10.87%204.63-41.15%204.16-55.3-20.33-9.54-16.54-9.03-45.64%2016.3-60.72%2019.4-11.54%2044.95-8.34%2060.36%207.75%2016.1%2016.83%2015.17%2048.34-.54%2060.6-7.12%205.55-17.7.14-17.63-7.97l-.07-2.65c-4.96%204.93-11.55%207.8-18.74%207.8-14.2%200-26.7-12.5-26.7-26.7%200-14.34%2012.5-26.98%2026.7-26.98%22/%3E%3Cpath%20fill%3D%22%23F89C0E%22%20d%3D%22M353.15%2093.9c-.03%202.3-2.44%204.64-5.92%204.64-3.52%200-5.7-2.56-5.7-4.84v-3.93c.03-2.36%202.22-4.8%205.8-4.8%203.9%200%205.83%202.62%205.83%205.1v3.82%22/%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M294.4%2029.45c0%202.43-2.43%204.42-5.92%204.42-3.52%200-5.7-2.4-5.7-4.68v-3.14c.04-2.36%202.1-5%205.67-5%203.9%200%205.95%202.53%205.95%205v3.4%22/%3E%3Cpath%20fill%3D%22%23F89C0E%22%20d%3D%22M476.2%2034v2.54h1.86c.48%200%20.85-.12%201.1-.35.26-.24.4-.57.4-.97s-.13-.7-.38-.9c-.24-.22-.67-.33-1.27-.33h-1.7zm-1.24%206.43v-7.25h3.15c.92%200%201.6.17%202.07.5.46.32.7.82.7%201.52%200%20.46-.14.83-.42%201.13-.28.3-.65.5-1.1.58v.07c.44.1.76.25.97.5.2.23.3.65.35%201.23%200%20.7.04%201.14.08%201.3.03.15.1.3.2.43h-1.26c-.13-.15-.2-.3-.24-.46-.04-.16-.05-.52-.05-1.07%200-.65-.13-1.07-.38-1.26-.24-.2-.6-.3-1.06-.3h-1.75v3.1h-1.24%22/%3E%3Cpath%20fill%3D%22%23F89C0E%22%20d%3D%22M477.8%2043.2c-3.5%200-6.38-2.86-6.38-6.38%200-3.53%202.87-6.38%206.4-6.38%203.5%200%206.37%202.85%206.37%206.38%200%203.52-2.87%206.38-6.4%206.38zm0-13.88c-4.14%200-7.5%203.36-7.5%207.52s3.36%207.52%207.52%207.52c4.15%200%207.5-3.37%207.5-7.52s-3.35-7.52-7.5-7.52%22/%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M189.3%2038.38c-7.12-.1-12.6%204.04-15.96%206.8-3.75-4-8.54-6.46-13.46-6.76-5.2-.33-10.06%201.42-13.16%203.94-1.1-2.52-2.52-4-4.97-4-2.68%200-5.53%202.3-5.53%206.04l.03%2048.5c0%202.8%202.38%205.62%205.78%205.62%203.74%200%205.8-2.87%205.8-5.63v-36c0-3.5%206-7.64%2011.06-7.57%203.22.04%207.06%203.23%207.06%208.26l.03%2035.38c0%203.12%203.14%205.52%206%205.52%203.4%200%205.96-2.57%205.96-5.5V57.26c0-4.4%206.66-8.06%2011.22-7.82%203.57.2%206.73%204.08%206.73%207.82v35.7c0%203.1%202.9%205.55%206.04%205.55%202.75%200%205.93-1.82%205.93-5.6V57.36c.04-13.05-12.85-19.14-18.56-18.97M288.53%2038.35c-3.48%200-5.73%202.87-5.73%205.77v48.73c-.02%203.24%202.54%205.65%205.7%205.65%203.62%200%205.93-2.82%205.93-5.9l.02-48.4c0-2.86-2.9-5.86-5.92-5.85M243.8%2087.38c-10.48%200-18.96-8.48-18.96-18.95s8.48-18.96%2018.96-18.96c10.47%200%2018.96%208.5%2018.96%2018.96s-8.5%2018.95-18.96%2018.95zm24.5-49.02c-3.27%200-5.6%202.62-5.6%205.17v2c-5.15-4.4-11.84-7.14-19.06-7.15-15.9-.02-29.97%2013.37-29.97%2030.12%200%2015.35%2013.4%2030.02%2029.97%2030.02%206.7%200%2013.9-2.58%2019.02-6.95V93c0%202.72%202.17%205.52%205.72%205.52%204.03%200%205.83-3.22%205.83-5.76V43.84c.05-2.3-2.47-5.47-5.9-5.48M328.44%2086.87c-7.38%200-13.96-5.68-13.96-14.04V26.5c0-3.2-2.6-5.44-5.8-5.44-3.7%200-5.85%202.74-5.85%205.44v46.38c-.05%2014.4%2011.85%2025.67%2025.4%2025.67%204.02%200%205.96-3.26%205.96-6.03%200-2.64-2.1-5.65-5.76-5.65%22/%3E%3Cpath%20fill%3D%22%23F89C0E%22%20d%3D%22M391.23%2038.34c-16.23.07-30.08%2014.38-30%2030.12v24.55c0%203.2%202.62%205.55%205.38%205.55%203.3%200%205.83-2.42%205.83-5.37V68.26c0-8.92%207.8-18.77%2018.73-18.72%203.56.02%205.9-2.7%205.88-5.68%200-2.38-1.72-5.53-5.8-5.52M458.66%2038.34c-3.46%200-5.68%202.83-5.68%205.44v24.7c0%209.53-8.03%2018.84-19.2%2018.84-9.1%200-18.78-7.92-18.78-18.67V43.9c0-2.6-1.95-5.56-5.82-5.56-2.73%200-5.5%202.3-5.5%205.46v24.66c0%2015.97%2014.25%2030.03%2030.07%2030.03%2017.28%200%2030.53-14.82%2030.53-29.97V43.8c0-2.78-2.3-5.46-5.62-5.46%22/%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h515.38v132.34H0z%22/%3E%3C/svg%3E') no-repeat center center, mailColor
+					background-size 22px 22px
+		#footer-subscribe
+			color blue
+			font-size 12px
+			font-weight 500
+			margin 15px 0 0
+			text-transform uppercase
+			input[type="email"]
+				display block
+				float left
+				width 90px
+				padding 0 10px
+				border-radius 2px 0 0 2px
+				background white
+				border 1px solid topGray
+				border-right none
+				line-height 27px
+				height 27px
+				margin 10px 0 0
+				font-size 12px
+			input[type="submit"]
+				display block
+				float left
+				width 90px
+				border-radius 0 2px 2px 0
+				background url("../i/check-icon.png") no-repeat center center, pink
+				border 1px solid topGray
+				border-left none
+				width 33px
+				height 29px
+				line-height 29px
+				color transparent
+				overflow hidden
+				margin 10px 0 0
+				
+	#footer-nav
+		float right
+		width calc(100% / 12 * 9 - 20px)
+		margin 0 20px 0 0
+		.footer-nav-column
+			width calc(16.666666% - 10px)
+			margin 0 10px 0 0
+			float left
+			a
+				display block
+				color blue
+				text-decoration underline
+				transition all .2s ease-in
+				&:hover
+					color pink
+			h2
+				font-size 12px
+				font-weight 500
+				text-transform uppercase
+			ul
+				margin 10px 0 20px
+				transition all .2s ease-in
+				&:hover li
+					opacity .6
+					&:hover
+						opacity 1
+				li
+					opacity .8
+					display block
+					font-size 12px
+					font-weight 300
+					line-height 16px
+					transition all .2s ease-in
+
+	#bottom-footer
+		background topGray
+		padding 10px 0
+		line-height 30px
+		color white
+		a
+			color white
+			text-decoration underline
+			transition all .2s ease-in
+			&:hover
+				color pink
+		.metrics
+			float left
+			margin 0 0 0 30px
+		.made-in
+			float right
+			margin 0 30px 0 30px
+			font-size 14px
+			font-weight 500
+			text-align right
+
+
+@media screen and (max-width: 1230px)
+
+	#footer
+		#company-info
+			margin 0 0 0 20px
+			width calc(((100% / 12) * 3) - 20px)
+			#footer-call-you
+				font-size 10px
+			#footer-tel
+				font-size 25px
+				line-height 40px
+
+			#footer-social
+				font-size 10px
+				a
+
+					width 27px
+					height 27px
+					&.google
+						background-size 18px 18px
+					&.vk
+						background-size 18px 18px
+					&.ok
+						background-size 18px 18px
+					&.mail
+						background-size 18px 18px
+			#footer-subscribe
+				font-size 10px
+				input[type="email"]
+					width 70px
+					font-size 10px
+					height 22px
+					line-height 22px
+				input[type="submit"]
+					height 24px
+					line-height 24px
+					width 27px
+					
+		#footer-nav
+			float right
+			width calc(100% / 12 * 9 - 10px)
+			margin 0 10px 0 0
+			.footer-nav-column
+				width calc(16.666666% - 10px)
+				margin 0 10px 0 0
+				float left
+				h2
+					font-size 10px
+				ul
+					li
+						font-size 10px
+
+		#bottom-footer
+			padding 10px 0
+			.metrics
+				margin 0 0 0 20px
+			.made-in
+				margin 0 20px 0
+				font-size 12px
+
+@media screen and (max-width: 1023px)
+
+	#footer
+		.footer-contacts-block
+			float left
+			margin 0 0 0 20px
+			width calc(100% / 7 * 4 - 20px)
+		.footer-subscribe-block
+			float left
+			margin 0 0 0 20px
+			width calc(100% / 7 * 3 - 20px)
+		#company-info
+			margin 0
+			width calc(100% / 12 * 7 - 20px)
+			#footer-call-you
+				margin-top 45px
+				font-size 12px
+			#footer-tel
+				font-size 28px
+
+			#footer-social
+				font-size 12px
+				margin-top 0
+				a
+
+					width 29px
+					height 29px
+					&.google
+						background-size 21px 21px
+					&.vk
+						background-size 21px 21px
+					&.ok
+						background-size 21px 21px
+					&.mail
+						background-size 21px 21px
+			#footer-subscribe
+				font-size 12px
+				input[type="email"]
+					width 90px
+					font-size 12px
+					height 27px
+					line-height 27px
+				input[type="submit"]
+					height 29px
+					line-height 29px
+					width 33px
+					
+		#footer-nav
+			float right
+			width calc(100% / 12 * 5)
+			margin 0 20px 0 0
+
+			.footer-nav-column
+				width auto
+				float none
+				
+				&:not(.mobile-show)
+					display none
+				h2
+					font-size 12px
+					margin 0 0 0 20px
+				ul li
+					font-size 12px
+					float left
+					margin 0 0 0 20px
+					width calc(50% - 20px)
+
+		#bottom-footer
+			.made-in
+				font-size 14px
+
+@media screen and (max-width: 767px)
+
+	#footer
+		#show-more-foot-navs
+			display block
+			border none
+			color blue
+			background url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D%22%23c02378%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20309.2%20309.2%22%3E%3Cpath%20d%3D%22M288.5%2065l-134%20137.8-133.8-138L0%2085.2l154.6%20159.2%20154.6-159%22/%3E%3C/svg%3E') no-repeat right center, transparent
+			font-size 16px
+			padding 0 30px 0 0
+			margin 20px 0 0 20px
+			border-bottom 1px dashed blue
+		.footer-contacts-block
+			width auto
+			float none
+			margin 0
+		.footer-subscribe-block
+			display none
+		#company-info
+			width auto
+			float none
+			margin 0 20px
+			#footer-call-you
+				margin-top 20px
+				font-size 22px
+			// #footer-call-you
+			// 	margin-top 20px
+					
+		#footer-nav
+			float none
+			margin 0 20px 0 0
+			width auto
+
+			.footer-nav-column
+				width auto
+				float none
+				h2
+					display none
+				ul
+					margin 20px 0
+					li
+						display none
+						line-height 30px
+						&:nth-child(1)
+							display block
+						&:nth-child(2)
+							display block
+						&:nth-child(3)
+							display block
+						&:nth-child(4)
+							display block
+						&:nth-child(5)
+							display block
+						&:nth-child(6)
+							display block
+
+		#bottom-footer
+			.made-in
+				font-size 14px

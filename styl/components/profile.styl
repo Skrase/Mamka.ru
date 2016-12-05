@@ -31,8 +31,6 @@
 		font-weight 300
 	input[type="submit"]
 		margin 0 0 16px 200px
-		font-size 14px
-		font-weight 300
 		width 170px
 		border none
 		background lightBlue
@@ -49,3 +47,65 @@
 #profile-right
 	float right
 	margin 30px
+
+
+@media screen and (max-width: 1230px)
+
+
+	#profile-left
+		width calc(50% - 40px)
+		margin 30px 0 0 20px
+		label
+			font-size 12px
+			width 140px
+			margin 0 0 13px 0
+			line-height 28px
+		input:not([type="submit"])
+			line-height 28px
+			border 1px solid topGray
+			border-radius 2px
+			margin 0 0 13px 20px
+			width 202px
+			font-size 14px
+			height 28px
+
+		#profile-left-info
+			margin 10px 0 15px 160px
+			font-size 12px
+		input[type="submit"]
+			margin 0 0 16px 160px
+			width 140px
+			font-size 15px
+			line-height 35px
+
+	#profile-right
+		float right
+		margin 30px 20px 30px 0
+		width calc(50% - 20px)
+
+@media screen and (max-width: 1023px)
+
+
+	#profile-left
+		width 280px
+		margin 30px auto
+		float none
+		label
+			float none
+			width auto
+			margin 10px 0 0
+		input:not([type="submit"])
+			float none
+			width 258px
+			margin 0 auto 10px
+
+		#profile-left-info
+			width auto
+			margin 10px auto
+		input[type="submit"]
+			float none
+			margin 0 auto
+			width 280px
+
+	#profile-right
+		display none

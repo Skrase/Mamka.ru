@@ -19,3 +19,30 @@
 			content ""
 			display block
 			background: linear-gradient(to top right, lightBlue 48%, transparent 52%), linear-gradient(to top right, transparent 50%, transparent 50%)
+
+@media screen and (max-width: 1230px)
+
+	.headers-blocks
+		border-bottom 3px solid lightBlue
+		margin 30px 20px
+		h2
+			font-size 26px
+			line-height 37px
+
+@media screen and (max-width: 1024px)
+
+	.headers-blocks
+		h2
+			font-size 24px
+			line-height 41px
+
+@media screen and (max-width: 767px)
+
+	.headers-blocks
+		h2
+			font-size 15px
+			line-height 25px
+			padding 0 10px
+			&:before
+				height 13px
+				top -13px

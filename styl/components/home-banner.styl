@@ -1,7 +1,6 @@
 #home-banner
 	background url("/i/banner-bg.png")
 	background-size cover
-	height 303px
 	#home-banner-slider
 		margin 0 0 0 30px
 		width 729px
@@ -11,8 +10,13 @@
 			position relative
 			color white
 			text-transform uppercase
+			padding-bottom 41.7582411758%
 			img
 				display block
+				width 100%
+				position absolute
+				left 0
+				top 0
 			.slide-title
 				position absolute
 				bottom 0
@@ -27,3 +31,64 @@
 	#home-banner-banner
 		float right
 		margin 0 30px 0 0
+
+@media screen and (max-width: 1230px)
+
+	#home-banner
+		#home-banner-slider
+			margin 0 0 0 20px
+			width calc(100% / 12 * 7.5 - 20px)
+			.slide
+				padding-bottom 41.7582411758%
+				.slide-title
+					font-size 39px
+					padding 0 15px 0 0
+					line-height 65px
+		#home-banner-banner
+			width calc(100% / 12 * 4.5 - 23px)
+			margin 0 20px 0 3px
+			a
+				padding-bottom 71.38227146814404%
+				position relative
+				height auto
+				display block
+			img
+				position absolute
+				right 0
+				top 0
+				width auto
+				height auto
+				display block
+				min-height 100%
+				min-width 100%
+
+@media screen and (max-width: 1023px)
+
+	#home-banner
+		#home-banner-slider
+			margin 0 20px
+			width auto
+			float none
+			.slide
+				.slide-title
+					font-size 39px
+					padding 0 15px 0 0
+					line-height 75px
+		#home-banner-banner
+			display none
+
+@media screen and (max-width: 767px)
+
+	#home-banner
+		#home-banner-slider
+			margin 0 20px
+			width auto
+			float none
+			.slide
+				.slide-title
+					font-size 18px
+					padding 0 20px 0 0
+					line-height 30px
+					width calc(100% - 20px)
+		#home-banner-slider
+			margin 0

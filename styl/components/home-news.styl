@@ -41,3 +41,56 @@
 			transition all .2s ease-in
 			&:hover
 				color blue
+
+@media screen and (max-width: 1230px)
+
+	.home-news-card
+		width calc((100% - 20px) / 3 - 20px )
+		height 75px
+		margin 0 0 30px 20px
+		.news-card-image
+			width 75px
+			height 75px
+			margin 0 20px 0 0
+		.news-card-content
+			width calc( 100% - 95px)
+			height 75px
+			.news-card-title
+				padding 10px 0
+				font-size 12px
+			.news-card-time
+				bottom 10px
+				font-size 12px
+			.news-card-more-link
+				bottom 10px
+				font-size 12px
+
+@media screen and (max-width: 1023px)
+
+	.home-news-card
+		width calc((100% - 20px) / 2 - 20px )
+		height 100px
+		margin 0 0 30px 20px
+		.news-card-image
+			width 100px
+			height 100px
+			margin 0 20px 0 0
+		.news-card-content
+			width calc( 100% - 120px)
+			height 100px
+			.news-card-title
+				padding 15px 0
+				font-size 14px
+			.news-card-time
+				bottom 15px
+				font-size 14px
+				font-weight 500
+			.news-card-more-link
+				bottom 15px
+				font-size 14px
+		&:last-child
+			display none
+@media screen and (max-width: 1023px)
+
+	#home-news
+		display none

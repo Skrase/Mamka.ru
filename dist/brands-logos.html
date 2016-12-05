@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header id="header">
@@ -20,8 +22,8 @@
               <li><a href="#">Контакты</a></li>
             </ul>
           </div>
-          <button id="login-button">Личный кабинет</button>
-          <button id="connect-button"><span>Свяжитесь с нами</span></button><a href="tel:88632334050" id="header-tel">8 863 233 40 50</a>
+          <button id="login-button" data-modal="login-modal" class="modal-open">Личный кабинет</button>
+          <button id="connect-button" data-modal="call-you-modal" class="modal-open"><span>Свяжитесь с нами</span></button><a href="tel:88632334050" id="header-tel">8 863 233 40 50</a>
         </div>
       </div>
       <div id="mid-header">
@@ -121,6 +123,13 @@
                   <label class="price-to">До
                     <input type="text">
                   </label>
+                </div>
+                <div class="my-range-w">
+                  <div class="my-range"></div>
+                  <div class="my-range-value">
+                    <div class="v-min"></div>
+                    <div class="v-max"></div>
+                  </div>
                 </div>
                 <button type="reset" id="reset-filter">Сбросить все</button>
               </form>

@@ -25,3 +25,49 @@
 				content ""
 				display block
 				background: linear-gradient(to top right, lightBlue 48%, transparent 52%), linear-gradient(to top right, transparent 50%, transparent 50%)
+
+@media screen and (max-width: 1230px)
+	#home-cards-buttons
+		margin 50px 20px 20px
+		.home-cards-button
+			font-size 26px
+			line-height 38px
+
+
+	#home-cards
+		.home-cards-tab
+			.card
+				width calc(25% - 27px)
+
+
+@media screen and (max-width: 1023px)
+	#home-cards-buttons
+		.home-cards-button
+			font-size 24px
+			line-height 43px
+
+	#home-cards
+		.home-cards-tab
+			.card
+				width calc((100% - 20px) / 3 - 22px)
+				&:last-child
+					display none
+
+
+@media screen and (max-width: 763px)
+	#home-cards-buttons
+		.home-cards-button
+			font-size 15px
+			line-height 25px
+			padding 0 10px
+			&.active:before
+				height 13px
+				top -13px
+
+
+	#home-cards
+		.home-cards-tab
+			.card
+				width auto
+				&:last-child
+					display block

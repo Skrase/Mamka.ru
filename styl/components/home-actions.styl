@@ -1,2 +1,208 @@
-#home-actions img
-	margin 0 30px 30px 
+.small-action-card
+	width calc((100% - 30px) / 4 - 30px)
+	margin 0 0 30px 30px
+	float left
+	display block
+	position relative
+	overflow hidden
+	padding-bottom calc((100% - 30px) / 4 - 30px)
+	.action-more
+		position absolute
+		left 0
+		right 0
+		top 100%
+		width 120px
+		text-align center
+		color white
+		margin auto
+		background pink
+		height 30px
+		line-height 30px
+		font-size 14px
+		font-weight 500
+		z-index 2
+		opacity 0
+		transition all .2s ease-in
+	.action-title
+		position absolute
+		left 0
+		right 0
+		bottom 100%
+		padding 0 20px
+		text-align center
+		color blue
+		margin auto
+		height 60px
+		line-height 30px
+		font-size 24px
+		font-weight 500
+		z-index 2
+		opacity 0
+		transition all .2s ease-in
+	img
+		width 100%
+		height 100%
+		position absolute
+		left 0
+		top 0
+		margin auto
+		min-width 100%
+		min-height 100%
+		display block
+		transition all .2s ease-in
+	&:after
+		display block
+		content ""
+		width 100%
+		height 100%
+		left 0
+		top 0
+		opacity 0
+		position absolute
+		background actionHoveredBg
+		transition all .2s ease-in
+		z-index 1
+	&:hover
+		img
+			left -5%
+			top -5%
+			min-width 110%
+			min-height 110%
+		&:after
+			opacity 1
+		.action-more
+			opacity 1
+			transform translateY(-90px)
+		.action-title
+			opacity 1
+			transform translateY(150px)
+
+.big-action-card
+	width calc((100% - 30px) / 2 - 30px)
+	margin 0 0 30px 30px
+	float left
+	display block
+	position relative
+	overflow hidden
+	padding-bottom calc((100% - 30px) / 4 - 30px)
+	.action-more
+		position absolute
+		left 0
+		right 0
+		top 100%
+		width 120px
+		text-align center
+		color white
+		margin auto
+		background pink
+		height 30px
+		line-height 30px
+		font-size 14px
+		font-weight 500
+		z-index 2
+		opacity 0
+		transition all .2s ease-in
+	.action-title
+		position absolute
+		left 0
+		right 0
+		bottom 100%
+		padding 0 20px
+		text-align center
+		color blue
+		margin auto
+		height 60px
+		line-height 30px
+		font-size 24px
+		font-weight 500
+		z-index 2
+		opacity 0
+		transition all .2s ease-in
+	img
+		width 100%
+		height 100%
+		position absolute
+		left 0
+		top 0
+		margin auto
+		min-width 100%
+		min-height 100%
+		display block
+		transition all .2s ease-in
+	&:after
+		display block
+		content ""
+		width 100%
+		height 100%
+		left 0
+		top 0
+		opacity 0
+		position absolute
+		background actionHoveredBg
+		transition all .2s ease-in
+		z-index 1
+	&:hover
+		img
+			left -5%
+			top -5%
+			min-width 110%
+			min-height 110%
+		&:after
+			opacity 1
+		.action-more
+			opacity 1
+			transform translateY(-90px)
+		.action-title
+			opacity 1
+			transform translateY(150px)
+
+@media screen and (max-width: 1230px)
+
+	.small-action-card
+		width calc((100% - 20px) / 4 - 20px)
+		margin 0 0 20px 20px
+		padding-bottom calc((100% - 20px) / 4 - 20px)
+		.action-more
+			display none
+		.action-title
+			display none
+		&:after
+			display none
+		&:hover
+			img
+				left 0
+				top 0
+				min-width 100%
+				min-height 100%
+
+	.big-action-card
+		width calc((100% - 20px) / 2 - 20px)
+		margin 0 0 20px 20px
+		padding-bottom calc((100% - 20px) / 4 - 20px)
+		.action-more
+			display none
+		.action-title
+			display none
+		&:after
+			display none
+		&:hover
+			img
+				left 0
+				top 0
+				min-width 100%
+				min-height 100%
+
+@media screen and (max-width: 1023px)
+
+	.small-action-card
+		width calc((100% - 20px) / 2 - 20px)
+		margin 0 0 20px 20px
+		padding-bottom calc((100% - 20px) / 2 - 20px)
+
+	.big-action-card
+		width calc((100% - 20px) - 20px)
+		margin 0 0 20px 20px
+		padding-bottom calc((100% - 20px) / 2 - 20px)
+
+	.no-mobile
+		display none

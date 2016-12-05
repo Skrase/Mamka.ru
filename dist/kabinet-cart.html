@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header id="header">
@@ -20,8 +22,8 @@
               <li><a href="#">Контакты</a></li>
             </ul>
           </div>
-          <button id="login-button">Личный кабинет</button>
-          <button id="connect-button"><span>Свяжитесь с нами</span></button><a href="tel:88632334050" id="header-tel">8 863 233 40 50</a>
+          <button id="login-button" data-modal="login-modal" class="modal-open">Личный кабинет</button>
+          <button id="connect-button" data-modal="call-you-modal" class="modal-open"><span>Свяжитесь с нами</span></button><a href="tel:88632334050" id="header-tel">8 863 233 40 50</a>
         </div>
       </div>
       <div id="mid-header">
@@ -67,14 +69,18 @@
         </div><a id="mobile-crumb" href="#">Бренды</a>
         <div class="center clear">
           <h1 class="content-header">Личный кабинет</h1>
-          <div id="kabinet-tabs" class="clear"><a href="#">Настройки профиля</a><a href="#">История покупок</a><a href="#" class="active">Просмотр корзины</a></div>
+          <div id="kabinet-tabs" class="clear">
+            <div id="kabinet-tabs-wrapper"><a href="#">Настройки профиля</a><a href="#">История покупок</a><a href="#" class="active">Просмотр корзины</a></div>
+          </div>
           <table id="cart-table">
-            <tr>
-              <th colspan="3"></th>
-              <th>Цена</th>
-              <th>Цена со скидкой</th>
-              <th></th>
-            </tr>
+            <thead>
+              <tr class="empty">
+                <th colspan="3"></th>
+                <th>Цена</th>
+                <th>Цена со скидкой</th>
+                <th></th>
+              </tr>
+            </thead>
             <tr>
               <td class="cart-image"><img src="i/card.png"></td>
               <td class="cart-title"><a href="#">Коляска CAM Dinamica беж.</a></td>
@@ -99,26 +105,26 @@
               </td>
               <td class="discount-title">Ваша скидка</td>
               <td class="discount-size">5%</td>
-              <td class="sum-with-discount"><s>42 000 ₽.</s></td>
-              <td></td>
+              <td class="sum-without-discount"><s>42 000 ₽.</s></td>
+              <td class="empty"></td>
             </tr>
             <tr class="cart-footer">
-              <td colspan="3"></td>
+              <td colspan="3" class="empty"></td>
               <td class="delivery-title">Доставка</td>
               <td class="delivery-size">Бесплатная</td>
-              <td></td>
+              <td class="empty"></td>
             </tr>
             <tr class="cart-footer">
-              <td colspan="3"></td>
+              <td colspan="3" class="empty"></td>
               <td class="sum-title">Итого</td>
               <td class="sum-size">39 900 ₽.</td>
-              <td></td>
+              <td class="empty"></td>
             </tr>
             <tr class="cart-footer">
-              <td colspan="3"></td>
+              <td colspan="3" class="empty"></td>
               <td class="to-shop"><a href="#">Вернутся к покупкам</a></td>
-              <td class="to-order"> <a href="#">Вернутся к покупкам</a></td>
-              <td></td>
+              <td class="to-order"> <a href="#">Перейти к оформлению</a></td>
+              <td class="empty"></td>
             </tr>
           </table>
         </div>
