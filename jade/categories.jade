@@ -8,6 +8,8 @@ html
 		main
 			section(id="content")
 				include components/breadcrumbs.jade
+				aside(id="sidebar" class="left-sidebar")
+					include components/sidebar.jade
 				div(class="center clear")
 					div(id="content-text" class="right-content")
 						h1 Каталог
@@ -21,21 +23,3 @@ html
 							a(href="#") ...
 							a(href="#") 10
 							a(href="#") >
-					aside(id="sidebar" class="left-sidebar")
-						section(id="sidebar-one-levlel")
-							ul
-								li.active
-									a(href="#") Классика
-								li
-									a(href="#") 2 в 1
-								li
-									a(href="#") 3 в 1
-								li
-									a(href="#") Трансформеры
-								li
-									a(href="#") Прогулочные
-								li
-									a(href="#") Трости
-
-
-						include components/sidebar.jade

@@ -112,8 +112,9 @@
 			background-size 50px 50px
 			transition all .2s ease-in
 			cursor pointer
-			&:hovers
-				background-color blue
+			&:hover
+				background-color sidebarBlue
+				
 		#like-button
 			border none
 			padding 0
@@ -259,13 +260,17 @@
 				margin 0 0 30px
 			.product-brand
 				display block
-				width 200px
+				width auto
 				margin 0 0 15px
+				img
+					max-width 200px
+					width 100%
 				.to-brand-link
 					text-decoration underline
 					color blue
 					font-size 18px
 					font-weight 500
+					display block
 					transition all .2s ease-in
 					&:hover
 						color pink

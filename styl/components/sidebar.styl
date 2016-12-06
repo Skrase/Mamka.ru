@@ -64,6 +64,8 @@
 	#sidebar-one-levlel
 		.sidebar-one-levlel-button
 			display none
+			outline none
+			margin 0 0 4px
 		ul li
 			display block
 			font-size 14px
@@ -82,6 +84,7 @@
 				background lightPink
 	.sidebar-filter-button
 		display none
+		outline none
 	#sidebar-filter
 		padding 20px
 		background url("../i/pattern.png") repeat-y left center
@@ -226,6 +229,7 @@
 					background-size cover
 					padding 0 20px
 					margin 0 0 2px
+					line-height 55px
 					&:after
 						background url("../i/mobile-catalog.png") no-repeat center center
 				ul
@@ -249,11 +253,13 @@
 			color white
 			font-weight 500
 			border none
-			margin 4px 0 0
+			margin 0
 			position relative
 		#sidebar-one-levlel
 			ul
 				display none
+				li a
+					background sidebarBlue!important
 			.sidebar-one-levlel-button
 				display block
 				font-size 22px

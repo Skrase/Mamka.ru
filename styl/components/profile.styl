@@ -87,25 +87,46 @@
 
 
 	#profile-left
-		width 280px
-		margin 30px auto
+		width auto
+		margin 0 20px 0 0
 		float none
-		label
-			float none
-			width auto
-			margin 10px 0 0
-		input:not([type="submit"])
-			float none
-			width 258px
-			margin 0 auto 10px
+		.input-row
+			width calc(50% - 20px)
+			margin 0 0 0 20px
+			float left
+			label
+				float none
+				width auto
+				width 280px
+				margin 10px auto 0
+			input:not([type="submit"])
+				float none
+				width 258px
+				margin 0 auto 10px
 
 		#profile-left-info
 			width auto
-			margin 10px auto
+			padding 10px 0 0
+			margin 20px auto
+			clear both
+			display block
+			text-align center
 		input[type="submit"]
 			float none
 			margin 0 auto
+			display block
 			width 280px
-
 	#profile-right
 		display none
+@media screen and (max-width: 767px)
+
+
+
+	#profile-left
+		width 280px
+		margin 30px auto
+		float none
+		.input-row
+			float none
+			margin 0 auto 20px
+			width auto

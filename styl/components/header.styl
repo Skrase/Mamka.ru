@@ -70,6 +70,7 @@
 			#main-nav
 				float right
 				line-height 56px
+				overflow auto
 				#mobile-connect-button
 					display none
 				ul li
@@ -152,14 +153,14 @@
 					line-height 40px
 					height 40px
 					width calc(100% - 72px)
-					border 1px solid blue
+					border 1px solid topGray
 					border-radius 3px
 					bottom 0
 					margin auto
 					visibility hidden
 					opacity 0
 					transform translateY(50px)
-					transition all .15s ease-in
+					transition hidden .15s ease-in, opacity .15s ease-in, transform .15s ease-in
 
 					&.active
 						visibility visible
@@ -332,6 +333,10 @@
 				width 150px
 			#cart-like-block
 				margin 0 20px 0 0
+				#cart-header-link
+					.cart-count
+						right 0
+						bottom 5px
 			#mid-nav-block
 				margin 0 20px 0 0
 				width 600px
