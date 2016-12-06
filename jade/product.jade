@@ -141,15 +141,14 @@ html
 									textarea(placeholder="Нам будет очень приятно, если вы оставите свой отзыв на сайте")
 									input(type="submit" value="Отправить отзыв")
 
-					div(class="recomendet-block")
-						div(class="recomendet-buttons")
-							div(class="recomendet-button active") Покупают вместе
-							div(class="recomendet-button") Недавно просмотренные
-						div(class="recomendet-tabs active")
-							div(class="recomendet-tab-content active")
+					div(class="recomendet-block tabs")
+						div(class="recomendet-buttons ")
+							div(class="recomendet-button tab-button active") Покупают вместе
+							div(class="recomendet-button tab-button") Недавно просмотренные
+						div(class="tabs-contents")
+							div(class="recomendet-tab-content tab-content active")
 								- for(i=0; i<4; i++)
 									include components/card.jade
-						div(class="recomendet-tabs")
-							div(class="recomendet-tab-content")
-								- for(i=0; i<4; i++)
+							div(class="recomendet-tab-content tab-content")
+								- for(i=0; i<3; i++)
 									include components/card.jade

@@ -1,9 +1,16 @@
 section(id="home-cards")
-	div(class="center clear")
+	div(class="center clear tabs")
 		div(id="home-cards-buttons" class="clear")
-			div(class="home-cards-button active") Скидки
-			div(class="home-cards-button") Новинки
-			div(class="home-cards-button") Хиты продаж
-		div(class="home-cards-tab")
-			-for(i=0; i<4; i++)
-				include card.jade
+			div(class="home-cards-button tab-button active") Скидки
+			div(class="home-cards-button tab-button") Новинки
+			div(class="home-cards-button tab-button") Хиты продаж
+		div(class="tabs-contents")
+			div(class="home-cards-tab tab-content active")
+				-for(i=0; i<4; i++)
+					include card.jade
+			div(class="home-cards-tab tab-content")
+				-for(i=0; i<2; i++)
+					include card.jade
+			div(class="home-cards-tab tab-content")
+				-for(i=0; i<3; i++)
+					include card.jade
