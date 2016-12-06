@@ -50,28 +50,28 @@ html
 
 						div(class="order-input-block")
 							h3 Метод оплаты
-							label(class="checkbox-ui")
-								input(type="checkbox" name="credit")
-								div(class="checkbox-item")
+							label(class="radio-ui")
+								input(type="radio" name="payment-type" value="credit")
+								div(class="radio-item")
 								div Кредитная карта
-							label(class="checkbox-ui")
-								input(type="checkbox" name="paypal")
-								div(class="checkbox-item")
+							label(class="radio-ui")
+								input(type="radio" name="payment-type" value="paypal")
+								div(class="radio-item")
 								div Paypal
-							label(class="checkbox-ui")
-								input(type="checkbox" name="qiwi-wallet")
-								div(class="checkbox-item")
+							label(class="radio-ui")
+								input(type="radio" name="payment-type" value="qiwi-wallet")
+								div(class="radio-item")
 								div Qiwi wallet
 
 						div(class="order-input-block")
 							h3 Доставка
-							label(class="checkbox-ui")
-								input(type="checkbox" name="courier")
-								div(class="checkbox-item")
+							label(class="radio-ui")
+								input(type="radio" name="delivery-type" value="courier")
+								div(class="radio-item")
 								div Курьером
-							label(class="checkbox-ui")
-								input(type="checkbox" name="point")
-								div(class="checkbox-item")
+							label(class="radio-ui")
+								input(type="radio" name="delivery-type" value="point")
+								div(class="radio-item")
 								div Пункт выдачи
 						div(class="clear order-buttons")
 							a(href="#" class="to-cart") Вернутся в корзину

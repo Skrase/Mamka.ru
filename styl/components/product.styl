@@ -45,7 +45,18 @@
 			display inline-block
 			width 97px
 			height 17px
-			background url("../i/stars.png") no-repeat center center
+			&.stars-0
+				background url("../i/stars.png") no-repeat center center
+			&.stars-1
+				background url("../i/stars-1.png") no-repeat center center
+			&.stars-2
+				background url("../i/stars-2.png") no-repeat center center
+			&.stars-3
+				background url("../i/stars-3.png") no-repeat center center
+			&.stars-4
+				background url("../i/stars-4.png") no-repeat center center
+			&.stars-5
+				background url("../i/stars-5.png") no-repeat center center
 		.to-reviews
 			vertical-align middle
 			margin 0 0 0 20px
@@ -73,11 +84,20 @@
 			vertical-align bottom
 		#product-count
 			width 53px
-			// border-radius 3px
+			border-radius 3px
+			padding 0 0 0 10px
 			margin 0 0 15px 30px
-			line-height 25px
+			height 25px
+			overflow hidden
 			vertical-align middle
-			boder 1px solid topGray
+			border 1px solid topGray
+			display inline-block
+			input
+				outline none
+				border none
+				width 100%
+				height 25px
+				line-height 25px
 		#product-add-to-cart
 			border none
 			padding 0 0 0 45px
@@ -100,9 +120,14 @@
 			background none
 			vertical-align middle
 			margin -6px 0 0 10px
+			cursor pointer
+			outline none
 			svg
 				width 50px
 				height 50px
+				stroke blue
+				transition all .2s ease-in
+			&:hover svg
 				stroke pink
 			span
 				display none
@@ -151,7 +176,8 @@
 		float right
 		margin 0
 		padding 20px
-		background red
+		background url("../i/pattern.png") repeat-y left center
+		background-size 100% auto
 		.product-char-content
 			background white
 			font-size 14px

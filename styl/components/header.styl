@@ -60,23 +60,35 @@
 			margin 13px 30px 0
 		#menu-button
 			display none
+			outline none
+			
 		#mid-nav-block
 			float right
 			width 670px
 			margin 0 62px 0 0
+			position relative
 			#main-nav
 				float right
 				line-height 56px
+				#mobile-connect-button
+					display none
 				ul li
 					display inline-block
 					font-size 12px
 					font-weight 500
+					opacity 1
+					transition all .15s ease-in
+					position relative
+					&.removed
+						transform translateY(-50px)
+						opacity 0
 					a
 						color lightBlue
 						margin 0 25px 0 0
 						transition all .2s ease-in
 						&:hover
 							color pink
+					
 			#search-button
 				float right
 				width 40px
@@ -84,17 +96,71 @@
 				border none
 				margin 10px 0 0 0
 				background transparent
+				outline none
+				position relative
 				cursor pointer
 				span
 					display none
 				svg
 					stroke blue
-					transition all .2s ease-in
+					display block
+					width 100%
+					height 100%
+					position absolute
+					left 0
+					top 0
+					bottom 0
+					right 0
+					margin auto
+					transition all .15s ease-in
 				&:hover
 					svg
 						stroke pink
+				&.active
+					svg
+						width 0
+						height 0
+					&:after
+						width 100%
+						height 100%
+						
+				&:after
+					display block
+					content ""
+					width 0%
+					height 0%
+					position absolute
+					left 0
+					top 0
+					bottom 0
+					right 0
+					margin auto
+					transition all .15s ease-in
+					background url("../i/close-popup.png") no-repeat center center
+
 			#search-form
-				display none
+				input
+					// display none
+					position absolute
+					padding 0 10px
+					right 50px
+					top 0
+					line-height 40px
+					height 40px
+					width calc(100% - 72px)
+					border 1px solid blue
+					border-radius 3px
+					bottom 0
+					margin auto
+					visibility hidden
+					opacity 0
+					transform translateY(50px)
+					transition all .15s ease-in
+					&.active
+						visibility visible
+						opacity 1
+						transform translateY(0)
+						
 		#cart-like-block
 			float right
 			margin 0 30px 0 0
@@ -126,6 +192,22 @@
 						margin -7px 0 0
 				&#cart-header-link
 					margin 0 3px 0 0
+					position relative
+					#cart-count
+						position absolute
+						border 1px solid green
+						background white
+						color blue
+						width 15px
+						height 15px
+						font-size 10px
+						position absolute
+						right 10px
+						bottom 13px
+						line-height 15px
+						text-align center
+						border-radius 50%
+						
 					svg
 						fill pink
 						width 40px
@@ -159,7 +241,79 @@
 					fill pink
 					stroke pink
 
+
+.dropdown-menu
+	display block
+	position absolute
+	top 89px
+	left 0
+	right 0
+	margin auto
+	width 1170px
+	background #FFF
+	z-index 2
+	line-height normal
+	height 440px
+	transform translateY(50px)
+	opacity 0
+	visibility hidden
+	transition all .2s ease-in
+	&.active
+		visibility visible
+		opacity 1
+		transform translateY(0)
+	// display none
+	a
+		transition all .2s ease-in
+	li
+		width calc(12.5% - 20px)
+		float left
+		display block
+		outline 1px solid headerBorderColor
+		font-size 12px
+		text-transform uppercase
+		padding 20px 10px
+		height calc(100% - 40px)
+		font-weight 500
+		transition all .2s ease-in
+		background-position bottom center
+		background-repeat no-repeat
+
+		&:hover
+			outline 1px solid pink
+			position relative
+			z-index 3
+			a
+				color pink
+				ul li a
+					color blue
+		a
+			color blue
+			&:hover a
+				color pink
+				text-decoration underline
+		ul
+			display block
+			padding 20px 0 0
+			li
+				font-weight 300
+				text-transform none
+				outline none!important
+				display block
+				float none
+				width auto
+				padding 0
+				line-height 16px
+				margin 0 0 6px
+				a
+					color blue!important
+					&:hover
+						font-weight 500
+						text-decoration underline
+
 @media screen and (max-width: 1230px)
+	.dropdown-menu
+		display none
 
 	#header
 		#top-header
@@ -209,18 +363,32 @@
 				border none
 				background transparent
 				position relative
+				z-index 4
+				position relative
+				
 				div
 					position absolute
 					left 0
 					width 25px
 					height 2px
 					background blue
+					transition all .2s ease
 					&.line1
 						top 2px
 					&.line2
 						top 12px
+						opacity 1
 					&.line3
 						top 21px
+				&.active
+					div.line1
+						transform rotate(45deg)
+						top 12px
+					div.line2
+						opacity 0
+					div.line3
+						transform rotate(-45deg)
+						top 12px
 			#cart-like-block
 				margin 0 20px 0 0
 				a#like-header-link
@@ -241,14 +409,76 @@
 					span
 						display none
 			#mid-nav-block
-				width auto
+				width calc(100% - 210px - 143px - 25px - 20px)
 				margin 0
 				#main-nav
-					display none
+					background-color #fff
+					position fixed
+					left 0
+					top 0
+					z-index 3
+					height 100%
+					width 100%
+					display table
+					text-align center
+					opacity 0
+					transition all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+					transform scale(0)
+					overflow auto
+					line-height normal
+
+					#mobile-connect-button
+						display block
+						border none
+						background blue
+						color white
+						text-align center
+						margin 10px auto
+						width 200px
+						font-size 18px
+						font-weight 500
+						line-height 35px
+						height 35px
+						border-radius 3px
+					&.active
+						opacity 1
+						transform scale(1)
+						ul li
+							// transform: translateX(0), translateY(0)
+							transform: translateX(0)!important
+							// transform translateY(0)
+							opacity 1!important
+							transition all 400ms 510ms
+
+					ul
+						padding-top 60px
+						text-align middle
+						li
+							display block
+							transition none
+							font-size 18px
+							font-weight 500
+							line-height 42px
+							a
+								margin 0
+							&:nth-child(odd)
+								opacity 0				
+								transform: translateX(30%)
+								// transform translateY(0)
+							&:nth-child(even)
+								opacity 0
+								transform: translateX(-30%)
+								// transform translateY(0)
 				#search-button
 					margin 0 20px
 					width 50px
 					height 50px
+				#search-form
+					input
+						right 70px
+						height 30px
+						line-height 30px
+						width calc(100% - 92px)
 
 						
 		#bottom-header
@@ -262,7 +492,7 @@
 				svg
 					display none
 
-@media screen and (max-width: 760px)
+@media screen and (max-width: 767px)
 	
 
 	
@@ -304,15 +534,24 @@
 				
 			
 					
-			#mid-nav-block #search-button
-				position absolute
-				left 0
-				top -35px
-				width 30px
-				height 30px
-				svg
-					width 40px
-					height 40px
-					margin -8px
+			#mid-nav-block
+				width 100%
+				#search-button
+					position absolute
+					left 0
+					top -80px
+					width 30px
+					height 30px
+					margin 0 0 0 20px
+					svg
+						width 40px
+						height 40px
+				#search-form input
+					top -45px
+					line-height 33px
+					height 33px
+					right auto
+					left 20px
+					width calc(100% - 85px)
 		#bottom-header
 			display none

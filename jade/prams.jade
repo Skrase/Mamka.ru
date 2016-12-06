@@ -9,20 +9,9 @@ html
 			section(id="content")
 				include components/breadcrumbs.jade
 				div(class="center clear")
-					div(id="content-text" class="right-content")
-						h1 Каталог
-						div(class="clear")
-							- for(i=0; i<8; i++)
-								include components/card.jade
-						div(id="pagination")
-							a(href="#") <
-							a(href="#") 1
-							a(href="#") 2
-							a(href="#") ...
-							a(href="#") 10
-							a(href="#") >
 					aside(id="sidebar" class="left-sidebar")
 						section(id="sidebar-one-levlel")
+							button(class="sidebar-one-levlel-button") Коляски
 							ul
 								li.active
 									a(href="#") Классика
@@ -39,3 +28,16 @@ html
 
 
 						include components/sidebar.jade
+					div(id="content-text" class="right-content")
+						h1 Каталог
+						div(class="clear")
+							- for(i=0; i<8; i++)
+								include components/card.jade
+						div(id="pagination")
+							a(href="#") <
+							a(href="#") 1
+							a(href="#") 2
+							a(href="#") ...
+							a(href="#") 10
+							a(href="#") >
+					

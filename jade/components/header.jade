@@ -33,6 +33,7 @@ header(id="header")
 				a(href="#" id="cart-header-link")
 					include ../../icons/cart.svg
 					span Корзина
+					div(id="cart-count") 20
 			div(id="mid-nav-block" class="clear")
 				form(id="search-form")
 					input(type="search" id="search-input" placeholder="Название товара")
@@ -42,7 +43,7 @@ header(id="header")
 				nav(id="main-nav")
 					ul
 						li
-							a(href='#') Кталог
+							a(href='#' class="dropdown-show") Кталог
 						li
 							a(href='#') О компании
 						li
@@ -53,6 +54,7 @@ header(id="header")
 							a(href='#') Товары по брендам
 						li
 							a(href='#') Товары по героям
+					button(id="mobile-connect-button" class="modal-open" data-modal="call-you-modal") Заказать звонок
 
 				
 
@@ -84,3 +86,5 @@ header(id="header")
 			a(href="#")
 				include ../../icons/catalog-icon-8.svg
 				span Товары для школы
+
+include dropdown-menu.jade

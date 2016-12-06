@@ -100,30 +100,30 @@
 			margin 0 10px 0 0
 			float left
 			a
-				display block
+				display inline
+				border-bottom 1px solid rgba(0,16,75,.3)
 				color blue
-				text-decoration underline
 				transition all .2s ease-in
+				opacity .7
+
 				&:hover
 					color pink
+					opacity 1
+					border-bottom 1px solid pink
 			h2
 				font-size 12px
 				font-weight 500
 				text-transform uppercase
+				a
+					opacity 1
 			ul
 				margin 10px 0 20px
-				transition all .2s ease-in
-				&:hover li
-					opacity .6
-					&:hover
-						opacity 1
 				li
-					opacity .8
 					display block
 					font-size 12px
 					font-weight 300
 					line-height 16px
-					transition all .2s ease-in
+					margin 0 0 3px
 
 	#bottom-footer
 		background topGray

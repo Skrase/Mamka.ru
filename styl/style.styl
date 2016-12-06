@@ -76,8 +76,12 @@ futura = "FuturaRoundBold", "Roboto", sans-sarif
 roboto = "Roboto", sans-sarif
 
 
+input:hover:not(:focus)
+	transition all .2s ease-in
+	border-color pink!important
+
 .my-range-w	{
-	margin 10px 0
+	margin 35px 0 0
 	display block
 	position relative
 	border-radius 0
@@ -88,6 +92,7 @@ roboto = "Roboto", sans-sarif
 	height: 8px;
 	background-color: #d1d1d1;
 	margin: auto;
+	border-radius 0
 	.ui-slider-range {
 		position: absolute; // important
 		z-index: 1;
@@ -108,19 +113,39 @@ roboto = "Roboto", sans-sarif
 		cursor: pointer;
 	}
 }
-.my-range-value {
-	.v-min,
-	.v-max {
-		position: absolute;
-		top: -30px;		
-	}
-	.v-min {
-		left: 0;
-	}
-	.v-max {
-		right: 0;
-	}
-}
+
+.my-range-value
+	position absolute
+	top -25px
+	width 100%
+	font-size 14px
+	.v-min
+		float left
+		position relative
+		color blue
+		&:after
+			display block
+			content ""
+			height 8px
+			width 1px
+			background topGray
+			top 100%
+			left 10px
+			position absolute
+	.v-max
+		float right
+		position relative
+		color blue
+		&:after
+			display block
+			content ""
+			height 8px
+			width 1px
+			background topGray
+			top 100%
+			right 10px
+			position absolute
+
 
 
 
@@ -182,8 +207,12 @@ img
 	max-width 1230px
 	margin 0 auto
 
-.hidden
-	display none
+// .hidden
+// 	width 0
+// 	height 0
+// 	border none
+// 	overflow hidden
+// 	opacity 0
 
 .checkbox-ui
 	display inline-block
@@ -196,10 +225,8 @@ img
 	input[type="checkbox"]:checked
 		+ div
 			font-weight 500
-		+ div.checkbox-item
-			background-color blue
-			border 1px solid blue
-			background-size 12px 12px
+		+ div.checkbox-item:after
+			transform translateY(0)
 	&:hover
 		font-weight 500
 		.checkbox-item
@@ -218,13 +245,78 @@ img
 			border-radius 2px
 			margin 0 25px 0 0
 			vertical-align top
-			background-color white
-			background-image url("../i/check.png")
-			background-position center center
-			background-repeat no-repeat
-			background-size 0 0
-			transition all .2s ease-in
-	
+			border 1px solid blue
+			position relative
+			overflow hidden
+			
+			&:after
+				width 14px
+				height 14px
+				position absolute
+				top 0
+				bottom 0
+				right 0
+				left 0
+				margin auto
+				background url("../i/check.png") no-repeat center center
+				background-size 12px 12px
+				transition all .2s ease
+				display block
+				content ""
+				transform translateY(30px)
+
+
+.radio-ui
+	display block
+	font-weight 300
+	cursor pointer
+	overflow hidden
+	margin 0 0 9px
+	line-height 16px
+	color blue
+	input[type="radio"]:checked
+		+ div
+			font-weight 500
+		+ div.radio-item:after
+			transform translateY(0)
+	&:hover
+		font-weight 500
+		.radio-item
+			border 1px solid blue
+	input
+		display none
+	div
+		display inline-block
+		font-size 14px
+		line-height 16px
+		vertical-align middle
+		&.radio-item
+			width 14px
+			height 14px
+			border 1px solid topGray
+			border-radius 2px
+			margin 0 25px 0 0
+			vertical-align top
+			border 1px solid blue
+			position relative
+			overflow hidden
+			background transparent
+			border-radius 50%
+			&:after
+				width 10px
+				height 10px
+				position absolute
+				top 0
+				bottom 0
+				right 0
+				left 0
+				margin auto
+				background pink
+				border-radius 50%
+				transition all .2s ease
+				display block
+				content ""
+				transform translateY(30px)
 
 .more-button
 	display block
@@ -267,7 +359,122 @@ img
 @require "components/inside-news.styl"
 
 
-				
+#added-block
+	position fixed
+	right 20px
+	top 20px
+	width 255px
+	.add-cart-block
+		background white
+		border 1px solid cartBorder
+		position relative
+		border-radius 2px
+		&:before
+			display block
+			content ""
+			background pink
+			height 11px
+			width 100%
+		&:after
+			display block
+			content ""
+			background white
+			height 8px
+			width 8px
+			border 1px solid cartBorder
+			position absolute
+			right 20px
+			top -5px
+			transform rotate(45deg)
+		img
+			display block
+			float left
+			border 1px solid cartBorder
+			border-radius 2px
+			margin 0 10px 10px
+			width 85px
+			height auto
+		.add-cart-block-content
+			float left
+			width calc(100% - 107px)
+			.add-cart-block-title
+				padding 12px 0
+				color blue
+				font-size 13px
+				line-height 18px
+				font-weight 500
+			.add-cart-block-price
+				color green
+				font-size 18px
+				line-height 18px
+				position absolute
+				right 10px
+				bottom 10px
+				font-weight 500
+		.clearfix
+			clear both
+
+.owl-controls
+	height 0
+	.owl-nav
+		.owl-prev
+			position absolute
+			background url("../i/slider-arrow.png") no-repeat center center
+			height 32px
+			width 18px
+			top 0
+			bottom 0
+			left 10px
+			margin auto
+		.owl-next
+			position absolute
+			background url("../i/slider-arrow.png") no-repeat center center
+			height 32px
+			width 18px
+			top 0
+			bottom 0
+			right 10px
+			transform rotate(180deg)
+			margin auto
+	.owl-dots
+		position absolute
+		left 10px
+		bottom 10px
+		height 14px
+		.owl-dot
+			width 14px
+			height 14px
+			border-radius 50%
+			margin 0 7px 0 0
+			background rgba(255,255,255,.3)
+			display inline-block
+			&:hover, &.active
+				background pink
+
+
+@media screen and (max-width: 767px)
+	.owl-controls
+		.owl-nav
+			.owl-prev
+				height 14px
+				width 7px
+				left 20px
+				background-size 100% 100%
+			.owl-next
+				height 14px
+				width 7px
+				right 20px
+				background-size 100% 100%
+		.owl-dots
+			left 20px
+			bottom 12px
+			.owl-dot
+				width 5px
+				height 5px
+				margin 0 2px 0 0
+				display inline-block
+				&:hover, &.active
+					background pink
 
 #pagination
 	padding 0 30px 30px
@@ -381,7 +588,7 @@ img
 	left 0
 	top 0
 	background actionHoveredBg
-	z-index 3
+	z-index 5
 	display none
 
 #call-you-modal
@@ -396,7 +603,7 @@ img
 	margin auto
 	background url("../i/call-you.png") no-repeat right center, #FFF
 	box-shadow 0 12px 23px rgba(28,22,11,.33)
-	z-index 4
+	z-index 6
 	.call-you-header
 		font-size 23px
 		font-weight 500
@@ -439,7 +646,7 @@ img
 	display none
 	background url("../i/thx.png") no-repeat bottom center, white
 	box-shadow 0 12px 23px rgba(28,22,11,.33)
-	z-index 4
+	z-index 6
 	max-width 330px
 	height 285px
 	position fixed
@@ -477,7 +684,7 @@ img
 	background white
 	color blue
 	box-shadow 0 12px 23px rgba(28,22,11,.33)
-	z-index 4
+	z-index 6
 	display none
 	.registration-left
 		height calc(100% - 45px)
@@ -596,7 +803,7 @@ img
 	background white
 	color blue
 	box-shadow 0 12px 23px rgba(28,22,11,.33)
-	z-index 4
+	z-index 6
 	.login-left
 		height calc(100% - 45px)
 		float left
@@ -699,6 +906,109 @@ img
 		height 15px
 		background url("../i/close-popup.png") no-repeat center center, transparent
 		border none
+
+
+@media screen and (max-width: 767px)
+	#call-you-modal
+		overflow auto
+		width auto
+		height auto
+		background white
+		.call-you-header
+			font-size 23px
+			font-weight 500
+			margin 45px auto 10px
+			width 280px
+		input
+			margin 0 auto 10px
+			width 248px
+			&[type="submit"]
+				margin 20px auto
+				width 280px
+
+
+	#login-modal
+		overflow auto
+		width auto
+		height auto
+		.login-left
+			float none
+			margin 0 0 0 -40px
+			width auto
+		.login-right
+			background white
+			width 30px
+			position absolute
+			right 0
+			top 0
+			margin 30px 20px 0
+			a
+				width 30px
+				height 30px
+				padding 0
+				color transparent
+				background-position center center!important
+				&:before
+					display none
+		.checkbox-ui
+			width 230px
+			margin 0 auto
+			display block
+		.login-header
+			width 230px
+			margin 45px auto 10px
+		input
+			margin 0 auto 10px
+			width 198px
+			&[type="submit"]
+				margin 20px auto
+				width 230px
+
+		.login-to-registration
+			margin 10px auto 30px
+			width 230px
+
+	#registration
+		// display block
+		overflow auto
+		width auto
+		height auto
+		.registration-right
+			float none
+			margin 0 0 0 -40px
+			width auto
+		.registration-left
+			background white
+			width 30px
+			position absolute
+			right 0
+			top 0
+			margin 30px 20px 0
+			a
+				width 30px
+				height 30px
+				padding 0
+				color transparent
+				background-position center center!important
+				&:before
+					display none
+		.checkbox-ui
+			width 230px
+			margin 0 auto
+			display block
+		.registration-header
+			width 230px
+			margin 45px auto 10px
+		input
+			margin 0 auto 10px
+			width 198px
+			&[type="submit"]
+				margin 20px auto
+				width 230px
+		.registration-to-login
+			margin 10px auto 30px
+			width 230px
+
 
 @media screen and (max-width: 1230px)
 	#content

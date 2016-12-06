@@ -20,7 +20,7 @@ html
 					div(id="product-content")
 						h1(id="product-header") Коляска CAM Dinamico
 						div(id="product-info")
-							div(class="product-stars")
+							div(class="product-stars stars-3")
 							a(href='#' class="to-reviews") 2 отзыва
 
 							p Не большое описание товара, характеризующее его основное назначение для использования, возможно какие то свойства отличающие товар от других товаров
@@ -29,8 +29,8 @@ html
 							form(class="clear")
 								div(class="clear")
 									div(class="price-size") 14 000 ₽.
-									input(type="number" id="product-count")
-
+									div(id="product-count")
+										input(type="number" min="1" value="1")
 								button(id="product-add-to-cart") Купить
 
 								button(id="like-button")
