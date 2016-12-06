@@ -1,6 +1,19 @@
 $(document).ready(function () {
 
 
+	$(".login-to-registration button").click(function (e) {
+		e.preventDefault();
+		$("#login-modal").fadeOut(300);
+		$("#registration").fadeIn(300);
+	});
+
+	$(".registration-to-login button").click(function (e) {
+		e.preventDefault();
+		$("#registration").fadeOut(300);
+		$("#login-modal").fadeIn(300);
+	});
+
+
 	$(".sidebar-one-levlel-button").click(function () {
 		$(this).toggleClass("active").next().slideToggle(300)
 	});
