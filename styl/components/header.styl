@@ -120,9 +120,13 @@
 					svg
 						width 0
 						height 0
+					&:hover:after
+						background url("../i/close-popup-pink.png") no-repeat center center, transparent
+
 					&:after
 						width 100%
 						height 100%
+						
 						
 				&:after
 					display block
@@ -137,7 +141,7 @@
 					margin auto
 					transition all .15s ease-in
 					background url("../i/close-popup.png") no-repeat center center
-
+					
 			#search-form
 				input
 					// display none
@@ -156,6 +160,7 @@
 					opacity 0
 					transform translateY(50px)
 					transition all .15s ease-in
+
 					&.active
 						visibility visible
 						opacity 1
@@ -434,12 +439,12 @@
 						color white
 						text-align center
 						margin 10px auto
-						width 200px
-						font-size 18px
 						font-weight 500
-						line-height 35px
-						height 35px
 						border-radius 3px
+						line-height 72px
+						height 72px
+						font-size 36px
+						width 400px
 					&.active
 						opacity 1
 						transform scale(1)
@@ -456,9 +461,10 @@
 						li
 							display block
 							transition none
-							font-size 18px
 							font-weight 500
-							line-height 42px
+							font-size 36px
+							line-height 61px
+							margin 0 0 20px
 							a
 								margin 0
 							&:nth-child(odd)
@@ -536,6 +542,17 @@
 					
 			#mid-nav-block
 				width 100%
+				#main-nav
+					#mobile-connect-button
+						width 200px
+						font-size 18px
+						line-height 35px
+						height 35px
+					ul
+						li
+							font-size 18px
+							line-height 42px
+							margin 0
 				#search-button
 					position absolute
 					left 0

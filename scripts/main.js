@@ -1,6 +1,17 @@
 $(document).ready(function () {
 
 
+	$("#show-more-foot-navs").click(function (e) {
+		e.preventDefault();
+		var navs = $("#footer #footer-nav .footer-nav-column ul li");
+		console.log(navs);
+		for (var i = 0; i < navs.length; i++) {
+			if ( i > 5 ) {
+				$(navs[i]).css("display", "block");
+			}
+		}
+	});
+
 	$(".login-to-registration button").click(function (e) {
 		e.preventDefault();
 		$("#login-modal").fadeOut(300);

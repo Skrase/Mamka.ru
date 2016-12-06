@@ -85,6 +85,10 @@ input:hover:not(:focus)
 	transition all .2s ease-in
 	border-color pink!important
 
+input:focus
+	outline #a5c7fe auto 5px;
+
+
 .my-range-w	{
 	margin 35px 0 0
 	display block
@@ -188,7 +192,7 @@ body
 	font-family roboto
 	font-size 16px
 
-input, textarea
+input, textarea, keygen, select, button
 	font-family roboto
 
 a
@@ -263,7 +267,7 @@ img
 				right 0
 				left 0
 				margin auto
-				background url("../i/check.png") no-repeat center center
+				background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAALNUlEQVR4Xu2dXVIbRxDHZ0QKXIiqkKoYHoNPEHICy28JpMpwgsAJDCcwPoHxCYxPYFwV5LxZPoHtExg/glNlXCWpDDGa9AoEQmi1M7vzn4/d9luimd6Znh/dvT09s1LwP9aAjgbmG/N3xJ35byf/HOo0lzqNuE31NHBn/velqZnaQ6HEhpRyeVgDSqhD+v8t2au9aP/7d2ucdhis6jGTOeP64sojqeSOkGI+q3ECmTyvbY4CxmBlaa5iv9cXVp6Thdownbbqid3O54PtQT8Gy1SDJW6fF6qBSpRSe53j5mby3wxWiUExmdrcwgq5PvnYpM+4tkqI7c7RwS6DVVSTJeg/9/OfDTGl3liZihIn7bPOPQbLijYjFkJphPrM7Dsp5JKtWSRWi8Gypc1I5ZALfEkucM3u8NVbBsuuRqOSVl9c3SIAnlofNLlDBsu6VuMQWL+7skxphTc6uao8M2Kw8mgt9j5JXDU9+2Y0o25rWpQ0/cRg2dJmRHKK5quypqqUeMFgZWmpZL/PLvyxVpO1l9BpncsHDBZUw2EJTzaWf5ieeoeKq/qzVepV+7i5xmCFtfbQ0ZALfIeKqy6h+vr9rLeclNYwWNClDEc4VSzQNot8hBxRT/XWu8ev95NnMFhITQci20VcRW+CzzpHza3BlBmsQBYfNgxKLcxN1z8i4yp6C/zQOes0xEnrhMGCrWRYgucWV5PN5QZsVEp9JbAanc/N98PPYIsF07h/wbZKYSbNZFAmM9qGwfK//pARWC2FSRvhZWph3M8MFmRZPQt1EVfRtk3ntLs8HFexK/S87ujHw+MqmoDqqd9G4yoGC72yHuX7jKsYLI8Lj3y077iKwUKuri/ZAcRVDJavxQc+10VcJahqIe3kM6cbgIvrS7SLuIqqFp5Q1cKO7hw53aCrqUDbOYmrhHrbPmo2TFTAYJloK7S2gKNbt6ZIWzbts+5SWr4qTSUMVmiwGIwHc3RrZAAGcRUH7waLF2pT2NGt4QkbxlUMVqi0aI6rf3SrJt9pNs/ZzDyuYrByqjqIbgHHVQxWEITkG0TIcRWDlW9NvfciF7hBLvA5dCAF4ioGC7oyGOHoI/EXoy4WVzFYmLXHSQUfib9gKl++Km3SnMfC4WBNsoujWyb7gDoTY7B0tOSxjYujW6b7gDrqYLB0tOSpjZMj8RbjKo6xPIFi+lh4KYzluIrBMl1hD+2dlMLk3AfUUQe7Qh0tOW7jZMvGUr6K3wodw5H7cS62bEBxFbvC3KuO74i+bc92vootFp6Jwk9wkloAxlVssQojYF+Ai9TC6FVD9mdxLZGDd6R2DWSjUwv9q4aOD258d9BgeMZNGSxjldnvAK8GpXzV4ApH+6MfL5HBcqXplOe4SC0MX+HoaroMlitNj3uOg6oFl3EVB+8+YRp6NrpqYdwVjq6mzhbLlaZHnuPioGnWVUPIqTNYSO2myXaQXU+7wtHVdBksV5p26AJtlhjnVQ+DlVdzOfvBXSCwFMZkygyWibaKtnVwh5XtEuO8U2aw8mouRz/0mUBfqYVxqmCwcgCSpwvaBbressnSAYOVpSEbv7t4C8y4xdjGNExkMFgm2srZFp0IRZyyyTnVq24MVlENZvRHu8AQUgscY4EhuiUe7QI9VC3oqpAtlq6mcrRDu0Df2fVJKmGwcgCj0wXuAid8IElnfOg2DBZIw9DvLweSXWeLBYInTSy6ItRH4Z6pCtlimWosoz38UETgLnCgHgbLMljQbZsIXCCDZRmoRBw6YKfCvU36RuAeYOjWRbLFsqVSdM7KwbF4W6pI5DBYlrQJvR0m4ERomvoYLAtg9QP2mamPFkSNFRFyIjQXWInCpmZqD6USDSHl/JUQpVpUpvFq0jeBUUoOUS40YI/MBU4M3i+D0MfUqJGxkC2qWHyi+3HEEKEoOiZ0wP799Pzet5N/DouO03X/W66wfnf1qayJLZOBqJ7Y7Xw+2DbpU5a2tB/4UQq5BJkP+HI0yJgvhV6DVfxUbqt92lk3/a4dcnJo2cgMO5UZf+ocNTHAohUz/FZo47YTpdT787Peeoym21jX6IMRju6xMp63Zoe+xbL6l6fECQH2oOyBfX1hdU9K8Zemns2aRbJtM2lSUoD+8mLKEputuhDQ9EJE2zYTwbJqrUafpNQOffn8ienChd4emV6IMWc1br3k3OJKixLw91GLSW5xr3PW3S5LUI9ML4R2hKsIE3JuYfULbexcJz+LSEvpmwT1BNeDMsBl4yUnVcWRB+zD8yKLtUrWF/+PXp8PRU+sxxzUI60VHeF6RWHDGn4l3DxBUoLvkBJ8vzh5HL0x9kRvs3v8et/J8yw/BJYMjXCTOUu1EvranOYaI6orGkwB+tnciDPsaYBJqHmfhHVkb4woa9XPsJ92l8sQf96IsZL/oNfnfapeeJhl3mz/3n9jPG5u2pZrWx7SWpU133exV9jfJ6y3KJP8q+1FyZIXA1woaxXq8fisNdP5fWQT2g9c9Ea03z7rboboDpDWKpRL0nRAMW1zs2zmwnLtwvbAJowu1FwXWytTpC7ajy1NhtZvRwQXW6t8UKWClfzQV6oUuxTU/5hfvHnPkBKpMGtVsmTouFWeeJii/50XKVqu4RIBlN4g0zCxlhubmInsUzq+3hg9w4XaE6SN5hf0ebcNk0WKsW02WNfpCPdB/QVc265P/yK/yFUFazUxxhr3V+ItqHe8BYTa5qqKtTIG6yqor8nnrs2zswx1UlE7U/+CmF9VrFUusJJO/Y9iC7nnOqh3ARfKKlfJWuUG69JyeXljRMOFKnyskrUqBFbSuX8Ef3pq3/UeIwouWEK0Anmr0dBB761wUsDhKR2BgAt2b2iJSo51Y8/iYHlMR9iEC5diUG/bR82G7oKUpZ0dsC61gXpNn6RsW3Ch7mSP4SJaBMxWweoH9cgTwikaoP3FLbrn4FkRBSGC9tjvXyiiT+tg9eFaXN0iwU+LDMy0b5GCQVTQbsuamuoihPYQsHwlUvPCBSnNLslR+byQwsCKBS7UPQxVS4jaTzdkIO2jrsvk/gOU265aQtQ5WL6y9LrxDSZ3Vc0UwzBcUFc4/CAfRYNZcMHcoONqjLxxELKfM7BCtFwQN5gE7cdN6CUrSCBsyXYKVmhwIdwg5a6eUU7N6HJgW4sZkhznYIUCF8oNVj1oH8DtBawQ4EK4wTJdnFbU+nkDawCXqIl9Z9co0UMHAT3GDYrtztHBbtFFKUN/r2D1Feij7IauDaLq1+TLG1b/sRu8Vqd/sHzBZRUpsoRKfKBjXcuWxUYrLgywSgCXSbY/WloMBh4OWJHDxW7wJnVhgRUpXOwGb5uy8MCKEC52g7GAFRlc7AZjAisSuKpcfjwplg/TFQ6PuP8RqdlD16eudV+Aql7Ql6an8MGikfsoudEGi0tkxqoqCrCSkYcKF31V9qcQL+XV/cNAtYsGrBDh4jRDOpZRgRUaXFx7VSKwQoKrqqecddxndBZrMKkQYi6Or0pmsUKAi+OryXYrWovlGy7OX5UcLF8xF+8PVgAsL3BV8DI1naB90CZ6Vzg8WZcBffvooFS6M4FGp23plOMCLt54zkardGBdusUNibyLvoKX1WajdLNFKcGCw1XCj4ObgpPVvrRgQeHiwD2Lq/EfwszsFVEDxDWQnHHPBqDUFmsoiWot5uKMezZUSYtKgGXTLWbduaWn9vK3qgxYVuDit0Htv4hKgZVoJf+Xy+j6x9PuGleL6rFVObCutn9q9CF1Ie9nqolu6KM2u3RL305mW25wpYFKgjWYffJBcTXVWxNKNm58wSyBSYr3qif2Ov9199lKmf/FVBosc3VxD10N/A9UVsIZbzREtAAAAABJRU5ErkJggg==') no-repeat center center
 				background-size 12px 12px
 				transition all .2s ease
 				display block
@@ -363,11 +367,20 @@ img
 @require "components/inside-action.styl"
 @require "components/inside-news.styl"
 
+.added-wrapper
+	max-width 1230px
+	position fixed
+	top 0
+	left 0
+	right 0
+	margin auto
+	z-index 6
+	display none
 
 #added-block
-	position fixed
-	right 20px
-	top 20px
+	position absolute
+	right 30px
+	top 30px
 	width 255px
 	.add-cart-block
 		background white
@@ -524,6 +537,7 @@ img
 		font-size 32px
 		margin 0 30px 30px
 		color lightBlue
+		font-weight 500
 		// line-height 69px
 		&:after
 			display block
@@ -646,6 +660,8 @@ img
 		height 15px
 		background url("../i/close-popup.png") no-repeat center center, transparent
 		border none
+		&:hover
+			background url("../i/close-popup-pink.png") no-repeat center center, transparent
 
 #thx
 	display none
@@ -676,6 +692,8 @@ img
 		height 15px
 		background url("../i/close-popup.png") no-repeat center center, transparent
 		border none
+		&:hover
+			background url("../i/close-popup-pink.png") no-repeat center center, transparent
 
 #registration
 	max-width 770px
@@ -793,6 +811,8 @@ img
 		height 15px
 		background url("../i/close-popup.png") no-repeat center center, transparent
 		border none
+		&:hover
+			background url("../i/close-popup-pink.png") no-repeat center center, transparent
 
 
 #login-modal
@@ -911,6 +931,8 @@ img
 		height 15px
 		background url("../i/close-popup.png") no-repeat center center, transparent
 		border none
+		&:hover
+			background url("../i/close-popup-pink.png") no-repeat center center, transparent
 
 
 @media screen and (max-width: 767px)
