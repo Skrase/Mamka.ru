@@ -47,10 +47,7 @@
 			font-weight 700
 			text-transform uppercase
 			&.active
-				a.active
-					background lightPink
-					&:after
-						transform rotate(180deg)
+
 				ul
 					display block
 					li a
@@ -64,6 +61,10 @@
 				padding 0 50px
 				position relative
 				transition all .2s ease-in
+				&.active
+					background lightPink
+					&:after
+						transform rotate(180deg)
 				&:hover
 					background lightPink
 				&:after
@@ -214,12 +215,8 @@
 			li
 				font-size 14px
 				&.active
-					a
-						background lightPink
-						&:after
-							transform rotate(180deg)
+
 					ul
-						display block
 						li
 							a
 								background transparent
@@ -261,14 +258,25 @@
 				font-size 22px
 				font-family futura
 				text-transform none
+
 				a
 					background url("../i/catalog-sidebar.png") no-repeat center center
 					background-size cover
 					padding 0 20px
 					margin 0 0 2px
 					line-height 55px
+					&.active
+						background url("../i/catalog-sidebar.png") no-repeat center center
+						background-size cover
+						&:after
+							background url("../i/mobile-catalog.png") no-repeat center center
+							transform rotate(90deg)
+					&:hover
+						background url("../i/catalog-sidebar.png") no-repeat center center
+						background-size cover
 					&:after
 						background url("../i/mobile-catalog.png") no-repeat center center
+						transform rotate(0)
 				ul
 					padding 20px 0
 					li
@@ -278,8 +286,6 @@
 				a
 					background url("../i/catalog-sidebar.png") no-repeat center center
 					background-size cover
-					&:after
-						transform rotate(90deg)
 		.sidebar-filter-button
 			display block
 			font-size 16px
