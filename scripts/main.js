@@ -33,6 +33,10 @@ $(document).ready(function () {
 		$(this).next().slideToggle(300)
 	});
 
+	$("#sidebar-categories-open").click(function () {
+		$(this).toggleClass("active").next().slideToggle(300)
+	});
+
 
 
 	$(".modal-open").click(function () {
