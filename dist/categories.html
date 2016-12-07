@@ -170,51 +170,75 @@
             </ul>
           </div>
         </div><a id="mobile-crumb" href="#">Бренды</a>
-        <aside id="sidebar" class="left-sidebar">
-          <section id="sidebar-one-levlel">
-            <button class="sidebar-one-levlel-button">Коляски</button>
-            <ul>
-              <li class="active"><a href="#">Классика</a></li>
-              <li><a href="#">2 в 1</a></li>
-              <li><a href="#">3 в 1</a></li>
-              <li><a href="#">Трансформеры</a></li>
-              <li><a href="#">Прогулочные</a></li>
-              <li><a href="#">Трости</a></li>
-            </ul>
-          </section>
-          <button id="sidebar-categories-open">Каталог</button>
-          <section id="sidebar-categories" class="mobile-hide">
-            <ul>
-              <li class="active"><a href="#">Коляски</a>
-                <ul>
-                  <li><a href="#">Классика</a></li>
-                  <li><a href="#">2 в 1</a></li>
-                  <li><a href="#">3 в 1</a></li>
-                  <li><a href="#">Трансформеры</a></li>
-                  <li><a href="#">Прогулочные</a></li>
-                  <li><a href="#">Трости</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Автокресла</a>
-                <ul>
-                  <li><a href="#">Классика</a></li>
-                  <li><a href="#">2 в 1</a></li>
-                  <li><a href="#">3 в 1</a></li>
-                  <li><a href="#">Трансформеры</a></li>
-                  <li><a href="#">Прогулочные</a></li>
-                  <li><a href="#">Трости</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Детская мебель</a></li>
-              <li><a href="#">Малыш и мама</a></li>
-              <li><a href="#">Одежда</a></li>
-              <li><a href="#">Обувь</a></li>
-              <li><a href="#">Игры и игрушки</a></li>
-              <li><a href="#">Товары для школы</a></li>
-            </ul>
-          </section>
-        </aside>
         <div class="center clear">
+          <aside id="sidebar" class="left-sidebar">
+            <section id="sidebar-one-levlel">
+              <button class="sidebar-one-levlel-button">Коляски</button>
+              <ul>
+                <li class="active"><a href="#">Классика</a></li>
+                <li><a href="#">2 в 1</a></li>
+                <li><a href="#">3 в 1</a></li>
+                <li><a href="#">Трансформеры</a></li>
+                <li><a href="#">Прогулочные</a></li>
+                <li><a href="#">Трости</a></li>
+              </ul>
+            </section>
+            <button class="sidebar-filter-button">Сортировка</button>
+            <section id="sidebar-filter" class="clear">
+              <form action="#">
+                <h2>Сортировка</h2>
+                <h3>Бренд</h3>
+                <input type="text" id="sidebar-search" placeholder="Поиск бренда">
+                <label class="checkbox-ui">
+                  <input type="checkbox">
+                  <div class="checkbox-item"></div>
+                  <div>Baby Care</div>
+                </label>
+                <label class="checkbox-ui">
+                  <input type="checkbox">
+                  <div class="checkbox-item"></div>
+                  <div>Chicco</div>
+                </label>
+                <label class="checkbox-ui">
+                  <input type="checkbox">
+                  <div class="checkbox-item"></div>
+                  <div>Happy baby</div>
+                </label>
+                <label class="checkbox-ui">
+                  <input type="checkbox">
+                  <div class="checkbox-item"></div>
+                  <div>Jetem</div>
+                </label>
+                <label class="checkbox-ui">
+                  <input type="checkbox">
+                  <div class="checkbox-item"></div>
+                  <div>Rant</div>
+                </label>
+                <label class="checkbox-ui">
+                  <input type="checkbox">
+                  <div class="checkbox-item"></div>
+                  <div>Noordi</div>
+                </label>
+                <h3 class="price-header">Цена</h3>
+                <div class="clear">
+                  <label class="price-from">От
+                    <input type="text">
+                  </label>
+                  <label class="price-to">До
+                    <input type="text">
+                  </label>
+                </div>
+                <div class="my-range-w">
+                  <div class="my-range"></div>
+                  <div class="my-range-value">
+                    <div class="v-min">200</div>
+                    <div class="v-max">100000</div>
+                  </div>
+                </div>
+                <button type="reset" id="reset-filter">Сбросить все</button>
+              </form>
+            </section>
+          </aside>
           <div id="content-text" class="right-content">
             <h1>Каталог</h1>
             <div class="clear"><a href="#" class="subcategory-card"><img src="i/card.png">
