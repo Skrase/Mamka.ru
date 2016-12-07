@@ -444,6 +444,10 @@ img
 			bottom 0
 			left 10px
 			margin auto
+			opacity .5
+			transition all .2s ease-in
+			&:hover
+				opacity 1
 		.owl-next
 			position absolute
 			background url("../i/slider-arrow.png") no-repeat center center
@@ -454,6 +458,10 @@ img
 			right 10px
 			transform rotate(180deg)
 			margin auto
+			opacity .5
+			transition all .2s ease-in
+			&:hover
+				opacity 1
 	.owl-dots
 		position absolute
 		left 10px
@@ -918,8 +926,11 @@ img
 		font-weight 300
 		button
 			border none
+			display inline
+			text-align left
 			background transparent
 			font-weight 500
+			width 130px
 			text-decoration underline
 
 	.close-modal

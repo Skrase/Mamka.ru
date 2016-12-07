@@ -5,9 +5,16 @@ $(document).ready(function () {
 		e.preventDefault();
 		var navs = $("#footer #footer-nav .footer-nav-column ul li");
 		console.log(navs);
+		$(this).toggleClass("active")
 		for (var i = 0; i < navs.length; i++) {
 			if ( i > 5 ) {
-				$(navs[i]).css("display", "block");
+
+				
+				if( $("#show-more-foot-navs").hasClass("active") ){
+					$(navs[i]).css("display", "block");	
+				}else{
+					$(navs[i]).css("display", "none");	
+				}
 			}
 		}
 	});
@@ -116,7 +123,7 @@ $(document).ready(function () {
 
 	$("#sidebar-categories a").click(function (e) {
 		e.preventDefault();
-		$(this).parent().toggleClass("active");
+		$(this).toggleClass("active").next().slideToggle(300);
 	});
 
 
