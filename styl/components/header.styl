@@ -232,20 +232,36 @@
 			font-weight 500
 			padding 0 0 10px
 			transition all .2s ease-in
-			svg
+			.header-icon
 				width 55px
 				height 55px
+				position relative
 				margin 10px auto -5px
-				fill blue
-				stroke blue
-				transition all .2s ease-in
+				.header-icon-blue
+					width 100%
+					height 100%
+					position absolute
+					left 0
+					top 0
+					transition all .2s ease-in
+					opacity 1
+				.header-icon-pink
+					width 100%
+					height 100%
+					position absolute
+					left 0
+					top 0
+					transition all .2s ease-in
+					opacity 0
 			span
 				display block
 			&:hover, &.active
 				color pink
-				svg
-					fill pink
-					stroke pink
+				.header-icon
+					.header-icon-pink
+						opacity 1
+					.header-icon-blue
+						opacity 0
 
 
 .dropdown-menu
@@ -500,7 +516,7 @@
 				width auto
 				display inline-block
 				margin 0 20px 0 0
-				svg
+				.header-icon
 					display none
 
 @media screen and (max-width: 767px)

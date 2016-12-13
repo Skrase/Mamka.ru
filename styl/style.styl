@@ -187,6 +187,25 @@ input:focus
 		display inline-block
 		width 15px
 
+.size-picker
+	display inline-block
+	margin 5px 5px 0 0
+	cursor pointer
+	&:hover span
+		border 1px solid pink
+	input
+		display none
+		&:checked + span
+			border 1px solid pink
+	span
+		display block
+		line-height 25px
+		padding 0 15px
+		text-align center
+		font-size 14px
+		border 1px solid topGray
+		border-radius 2px
+
 body
 	background white
 	font-family roboto

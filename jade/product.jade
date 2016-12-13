@@ -19,48 +19,64 @@ html
 
 					div(id="product-content")
 						h1(id="product-header") Коляска CAM Dinamico
-						div(id="product-info")
-							div(class="product-stars stars-3")
-							a(href='#' class="to-reviews") 2 отзыва
+						form()
+							div(id="product-info")
+								div(class="product-stars stars-3")
+								a(href='#' class="to-reviews") 2 отзыва
 
-							p Не большое описание товара, характеризующее его основное назначение для использования, возможно какие то свойства отличающие товар от других товаров
+								p Не большое описание товара, характеризующее его основное назначение для использования, возможно какие то свойства отличающие товар от других товаров
 
-							div(class="price-title") Цена:
-							form(class="clear")
+								div(class="price-title") Цена:
 								div(class="clear")
-									div(class="price-size") 14 000 ₽.
-									div(id="product-count")
-										input(type="number" min="1" value="1")
-								button(id="product-add-to-cart") Купить
+									div(class="clear")
+										div(class="price-size") 14 000 ₽.
+										div(id="product-count")
+											input(type="number" min="1" value="1")
+									button(id="product-add-to-cart") Купить
 
-								button(id="like-button")
-									include ../icons/heart.svg
-									span в избранное
+									button(id="like-button")
+										include ../icons/heart.svg
+										span в избранное
 
-							div(class="product-in-store") Товар на складе: <span class="green">В наличии</span>
+								div(class="product-in-store") Товар на складе: <span class="green">В наличии</span>
 
-							div(id="product-share" class="clear")
-								a(href="#" class="google")
-									span Поделится
-								a(href="#" class="vk")
-									span Поделится
-								a(href="#" class="ok")
-									span Поделится
+								div(id="product-share" class="clear")
+									a(href="#" class="google")
+										span Поделится
+									a(href="#" class="vk")
+										span Поделится
+									a(href="#" class="ok")
+										span Поделится
 
-						div(id="product-char")
-							div(class="product-char-content")
-								div Артикул:
-									strong 884005735365
-								div Бренд:
-									strong Моя Горошинка (Россия)
-								div Материал:
-									strong 100% Хлопок
-								div Вес:
-									strong 0.1 кг.
-								div Сезонность:
-									strong Осень-Зима 2016
-								div Вес:
-									strong 6,9 кг
+							div(id="product-char")
+								div(class="product-char-content")
+									div Артикул:
+										strong 884005735365
+									div Бренд:
+										strong Моя Горошинка (Россия)
+									div Материал:
+										strong 100% Хлопок
+									div Вес:
+										strong 0.1 кг.
+									div Сезонность:
+										strong Осень-Зима 2016
+									div Вес:
+										strong 6,9 кг
+									div
+										strong Выбрать размер:
+										div(class="celar")
+											label.size-picker
+												input(type="radio" value="12" name="size")
+												span 12
+											label.size-picker
+												input(type="radio" value="13" name="size")
+												span 13
+											label.size-picker
+												input(type="radio" value="14" name="size")
+												span 14
+											label.size-picker
+												input(type="radio" value="15" name="size")
+												span 15
 
 				div(class="center")
 					div(id="product-tabs" class="tabs")

@@ -121,7 +121,7 @@ $(document).ready(function () {
 	});
 
 
-	$("#sidebar-categories a").click(function (e) {
+	$("#sidebar-categories a.with-subcategory").click(function (e) {
 		e.preventDefault();
 		$(this).toggleClass("active").next().slideToggle(300);
 	});
