@@ -31,15 +31,32 @@ section(id="sidebar-filter" class="clear")
 			div Noordi
 
 		h3(class="price-header") Цена
-		div(class="clear")
-			label(class="price-from") От
-				input(type="text")
-			label(class="price-to") До
-				input(type="text")
+		div(class="my-range-block")
+			div(class="clear")
+				label(class="price-from") От
+					input(type="text")
+				label(class="price-to") До
+					input(type="text")
 
-		div(class="my-range-w")
-			div(class="my-range")
-			div(class="my-range-value")
-				div(class="v-min") 200
-				div(class="v-max") 100000
+			div(class="my-range-w")
+				div(class="my-range")
+				div(class="my-range-value")
+					div(class="v-min") 200
+					div(class="v-max") 100000
+
+
+		h3(class="price-header") Штук в упаковке
+		div(class="my-range-block")
+			div(class="clear")
+				label(class="price-from") От
+					input(type="text")
+				label(class="price-to") До
+					input(type="text")
+
+			div(class="my-range-w")
+				div(class="my-range")
+				div(class="my-range-value")
+					div(class="v-min") 200
+					div(class="v-max") 100000
+
 		button(type="reset" id="reset-filter") Сбросить все

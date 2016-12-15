@@ -180,8 +180,10 @@ $(document).ready(function () {
 				slide: function(event, ui) {
 					// $('.v-min').text( '$' + ui.values[0].toFixed(2) );
 					// $('.v-max').text( '$' + ui.values[1].toFixed(2) );
-					$('.price-from input').val( ui.values[0] );
-					$('.price-to input').val( ui.values[1]);
+					$(this).parent().parent().children(".clear").children(".price-from").children("input").val( ui.values[0] );
+					// $('.price-to input').val( ui.values[1]);
+					$(this).parent().parent().children(".clear").children(".price-to").children("input").val( ui.values[1] );
+					
 				}
 	});
 
