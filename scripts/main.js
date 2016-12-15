@@ -171,30 +171,51 @@ $(document).ready(function () {
 		navText: ['','']
 	});
 
-	$('.my-range').slider({
-				range: true,
-				min: 0,
-				max: 100000,
-				step: 500,
-				values: [0, 100000],
-				slide: function(event, ui) {
-					// $('.v-min').text( '$' + ui.values[0].toFixed(2) );
-					// $('.v-max').text( '$' + ui.values[1].toFixed(2) );
-					$(this).parent().parent().children(".clear").children(".price-from").children("input").val( ui.values[0] );
-					// $('.price-to input').val( ui.values[1]);
-					$(this).parent().parent().children(".clear").children(".price-to").children("input").val( ui.values[1] );
+	// $('.my-range').slider({
+	// 			range: true,
+	// 			min: $(this).data("min"),
+	// 			max: $(this).data("max"),
+	// 			step: $(this).data("step"),
+	// 			values: $(this).data("values"),
+	// 			slide: function(event, ui) {
+	// 				// $('.v-min').text( '$' + ui.values[0].toFixed(2) );
+	// 				// $('.v-max').text( '$' + ui.values[1].toFixed(2) );
+	// 				$(this).parent().parent().children(".clear").children(".price-from").children("input").val( ui.values[0] );
+	// 				// $('.price-to input').val( ui.values[1]);
+	// 				$(this).parent().parent().children(".clear").children(".price-to").children("input").val( ui.values[1] );
 					
-				}
-	});
+	// 			}
+	// });
 
-	// write default amount states
-	$('.price-from input').val( $(".my-range").slider("values", 0) );
-	$('.price-to input').val( $(".my-range").slider("values", 1) );
-	// $('.v-max').text( '$' + $(".my-range").slider("values", 1) );
-
-
+	// // write default amount states
+	// $('.price-from input').val( $(".my-range").slider("values", 0) );
+	// $('.price-to input').val( $(".my-range").slider("values", 1) );
+	// // $('.v-max').text( '$' + $(".my-range").slider("values", 1) );
 
 
+	var ranges = $('.my-range');
+	for (var i = 0; i < ranges.length; i++) {
+		$(ranges[i]).slider({
+					range: true,
+					min: $(ranges[i]).data("min"),
+					max: $(ranges[i]).data("max"),
+					step: $(ranges[i]).data("step"),
+					values: $(ranges[i]).data("values"),
+					slide: function(event, ui) {
+						// $('.v-min').text( '$' + ui.values[0].toFixed(2) );
+						// $('.v-max').text( '$' + ui.values[1].toFixed(2) );
+						$(this).parent().parent().children(".clear").children(".price-from").children("input").val( ui.values[0] );
+						// $('.price-to input').val( ui.values[1]);
+						$(this).parent().parent().children(".clear").children(".price-to").children("input").val( ui.values[1] );
+						
+					}
+		});
+
+		$('.price-from input').val( $(".my-range").slider("values", 0) );
+		$('.price-to input').val( $(".my-range").slider("values", 1) );
+		$(ranges[i]).parent().parent().children(".clear").children(".price-from").children("input").val( $(ranges[i]).slider("values", 0) );
+		$(ranges[i]).parent().parent().children(".clear").children(".price-to").children("input").val( $(ranges[i]).slider("values", 1) );
+	}
 
 
 });
