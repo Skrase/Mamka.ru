@@ -193,6 +193,53 @@ $(document).ready(function () {
 	// // $('.v-max').text( '$' + $(".my-range").slider("values", 1) );
 
 
+	function checkCurr(d) {
+		if(window.event){
+			if(event.keyCode == 37 || event.keyCode == 39){
+				return;
+			} 
+		}
+		d.value = d.value.replace(/\D/g,'');
+	}
+
+
+	$(".price-to input").keyup(function() {
+		checkCurr(this);
+		var range = $(this).parent().parent().next().children(".my-range");
+		var values = range.data("values");
+		// values[0] = $(this).val();
+		// $(this).parent().parent().next().children(".my-range").attr("data-values", values)
+		var value1= $(this).parent().parent().children(".price-from").children("input").val();
+		var value2= $(this).val();
+		var max = range.data("max");
+		     
+		if (value2 > max) {
+			value2 = max;
+			$(this).val(max)
+		}
+		if(parseInt(value1) > parseInt(value2)){
+			value2 = value1;
+			$(this).val(value2);
+		}
+		range.slider("values",1,value2);
+
+
+	});
+
+	$(".price-from input").keyup(function() {
+		checkCurr(this);
+		var range = $(this).parent().parent().next().children(".my-range");
+		var value1= $(this).val();
+		var value2= $(this).parent().parent().children(".price-to").children("input").val();
+		 
+		if(parseInt(value1) > parseInt(value2)){
+		    value1 = value2;
+		    $(this).val(value1);
+		}
+		range.slider("values",0,value1); 
+	});
+
+
 	var ranges = $('.my-range');
 	for (var i = 0; i < ranges.length; i++) {
 		$(ranges[i]).slider({
