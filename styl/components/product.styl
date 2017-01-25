@@ -9,16 +9,39 @@
 		border 1px solid cardBorderColor
 		border-radius 3px
 		display block
-	#small-product-image
-		margin 0 0 0 -17px
+		padding-top 100%
+		position relative
 		img
+			position absolute
+			display block
+			left 0
+			top 0
+			right 0
+			bottom 0
+			margin auto
+			max-width 100%
+			max-height 100%
+	#small-product-images
+		margin 0 0 0 -17px
+		.small-product-image
 			cursor pointer
 			float left
 			display block
 			width calc(33.333333% - 19px)
 			margin 17px 0 0 17px
+			height 88px
 			border-radius 3px
 			border 1px solid cardBorderColor
+			position relative
+			img
+				position absolute
+				left 0
+				top 0
+				right 0
+				bottom 0
+				margin auto
+				max-width 100%
+				max-height 100%
 
 #product-content
 	width 800px
@@ -114,6 +137,8 @@
 			cursor pointer
 			&:hover
 				background-color sidebarBlue
+			&:disabled
+				opacity .1
 				
 		#like-button
 			border none

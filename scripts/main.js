@@ -61,8 +61,8 @@ $(document).ready(function () {
 	});
 
 
-	$("#small-product-image img").click(function () {
-		$("#big-product-image").attr("src", $(this).attr("src"))
+	$(".small-product-image").click(function () {
+		$("#big-product-image img").attr("src", $(this).children("img").attr("src"))
 	});
 
 
@@ -205,6 +205,11 @@ $(document).ready(function () {
 
 	$(".price-to input").keyup(function() {
 		checkCurr(this);
+
+
+
+	});
+	$(".price-to input").blur(function() {
 		var range = $(this).parent().parent().next().children(".my-range");
 		var values = range.data("values");
 		// values[0] = $(this).val();
@@ -222,6 +227,7 @@ $(document).ready(function () {
 			$(this).val(value2);
 		}
 		range.slider("values",1,value2);
+		
 
 
 	});
